@@ -40,39 +40,42 @@ def extract_text_from_pdf(pdf_path):
         text += page.get_text()
     return text
 
-# Create list of resumes 
+
+
+# Create or load embeddings 
 resume_names = [] 
 resumes = []
-folder_path = "/Users/christopherperezlebron/Documents/Resumes"
-for filename in os.listdir(folder_path):
-    if filename.lower().endswith(".pdf"):
-        file_path = os.path.join(folder_path, filename)
-        text = extract_text_from_pdf(file_path)
-        resume_names.append(filename)
-        resumes.append(text)
-
-# Make np matrix for unit length resume embeddings (NumResumes x Embedding Dimension)
-resume_embeddings = np.zeros(shape=(len(resumes), len(result['embedding'])))
-
-# Create embeddings for resumes
-for i in range(len(resumes)):
+resume_folder_path = "/Users/christopherperezlebron/Documents/Resumes"
+for filename in os.listdir(resume_folder_path):
     cache_path = "cache/"
-    file_path = cache_path+resume_names[i].replace(".pdf", ".pkl")
+    pkl_file_path = cache_path+filename.replace(".pdf", ".pkl")
 
-    if os.path.exists(file_path):
-        with open(file_path, "rb") as f:
+    #if this resume's unit embedding has been cached, load it
+    if filename.lower().endswith(".pdf") and os.path.exists(pkl_file_path):
+        with open(pkl_file_path, "rb") as f:
             resume_embedding = pickle.load(f)
-        print(f"Loaded cached {resume_names[i]} from {cache_path}.")
-    else:
-        print(f"Building {resume_names[i]} (this may take a while)…")
-        result = text_embedder.run(resumes[i])
+        print(f"Loaded cached {filename} from {pkl_file_path}.")
+
+        #Store the embedding and the corresponding file name
+        resume_names.append(filename)
+        resumes.append(resume_embedding)
+    #otherwise, make it 
+    elif filename.lower().endswith(".pdf"):
+        resume_file_path = os.path.join(resume_folder_path, filename)
+        text = extract_text_from_pdf(resume_file_path)
+        result = text_embedder.run(text)
         resume_embedding = np.array(result['embedding'])
         resume_embedding = resume_embedding/np.linalg.norm(resume_embedding)
-        with open(file_path, "wb") as f:
+        with open(pkl_file_path, "wb") as f:
             pickle.dump(resume_embedding, f, protocol=pickle.HIGHEST_PROTOCOL)
-        print(f"Saved {resume_names[i]} cache to {cache_path}.")
-        
-    resume_embeddings[i] = resume_embedding
+        print(f"Saved {filename} cache to {pkl_file_path}.")
+
+        # Store the embedding and the corresponding file name
+        resume_names.append(filename)
+        resumes.append(resume_embedding)
+
+# Make np matrix for unit length resume embeddings (NumResumes x Embedding Dimension)
+resume_embeddings = np.array(resumes, dtype=float)
       
 # Obtain Cosine Similarity matrix by taking dot product 
 similarities = np.dot(resume_embeddings, unit_skills_embedding)
