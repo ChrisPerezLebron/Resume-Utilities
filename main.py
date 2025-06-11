@@ -2,6 +2,7 @@ from haystack.components.embedders import SentenceTransformersTextEmbedder
 import numpy as np 
 import os 
 import fitz
+import pickle
 
 # Setup text embedder
 text_embedder = SentenceTransformersTextEmbedder(model='sentence-transformers/all-MiniLM-l6-v2')
@@ -24,6 +25,7 @@ result = text_embedder.run("""
                 modular deisgn/maintainable 
                 Collaboration
             """)
+
 # Extract actual embedding as a Numpy array 
 skills_embedding = np.array(result['embedding'])
 
@@ -54,9 +56,23 @@ resume_embeddings = np.zeros(shape=(len(resumes), len(result['embedding'])))
 
 # Create embeddings for resumes
 for i in range(len(resumes)):
-    result = text_embedder.run(resumes[i])
-    resume_embeddings[i] = np.array(result['embedding'])
-    resume_embeddings[i] = resume_embeddings[i]/np.linalg.norm(resume_embeddings[i])
+    cache_path = "cache/"
+    file_path = cache_path+resume_names[i].replace(".pdf", ".pkl")
+
+    if os.path.exists(file_path):
+        with open(file_path, "rb") as f:
+            resume_embedding = pickle.load(f)
+        print(f"Loaded cached {resume_names[i]} from {cache_path}.")
+    else:
+        print(f"Building {resume_names[i]} (this may take a while)…")
+        result = text_embedder.run(resumes[i])
+        resume_embedding = np.array(result['embedding'])
+        resume_embedding = resume_embedding/np.linalg.norm(resume_embedding)
+        with open(file_path, "wb") as f:
+            pickle.dump(resume_embedding, f, protocol=pickle.HIGHEST_PROTOCOL)
+        print(f"Saved {resume_names[i]} cache to {cache_path}.")
+        
+    resume_embeddings[i] = resume_embedding
       
 # Obtain Cosine Similarity matrix by taking dot product 
 similarities = np.dot(resume_embeddings, unit_skills_embedding)
