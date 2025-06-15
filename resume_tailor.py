@@ -37,7 +37,57 @@ skills_embedding = np.array(skills_result['embedding'])
 # Normalize the skills embedding (to allow for more efficient cosine similarity comparisons)
 skills_embedding_unit = skills_embedding/np.linalg.norm(skills_embedding)
 
+courses = [
+    "CMSC351 - Algorithms",
+    "STAT400 - Applied Probability and Statistics I",
+    "MATH181 - Calculus I",
+    "MATH182 - Calculus II",
+    "CMSC203 - Computer Science I - Object Oriented Programming (Java)",
+    "CMSC204 - Computer Science II - Data Structures and Algorithms (Java)",
+    "CMSC426 - Computer Vision (Python)",
+    "PHYS203 - General Physics Non Engineering I",
+    "ENGL102HC - Honors Critical Reading, Writing, and Research", 
+    "CMSC421 - Intro to Artificial Intelligence (Python)",
+    "CMSC430- Intro to Compilers (Racket, x86)",
+    "CMSC216 - Intro to Computer Systems (C/C++, ARM Assembly)",
+    "CMSC320 - Intro to Datascience (Python)",
+    "ENES100 - Intro to Engineering Design",
+    "CMSC422 - Intro to Machine Learning (Python)", 
+    "MATH206 - Intro to Matlab",
+    "CMSC470 - Intro to Natural Language Processing (Python)",
+    "CMSC416 - Intro to Parallel Computing (C/C++, Cuda)",
+    "CMSC140 - Intro to Programming (C++)",
+    "CMSC246 - Intro to SQL Using Oracle",
+    "MATH240 - Linear Algebra (Matlab)",
+    "CMSC330 - Organization of Programming Languages (Python, OCamel, Rust)",
+    "ENGL393 - Technical Writting",
+]
+# Embedd all courses as unit length word embeddings into a single matrix
+courses_matrix_unit = np.zeros(shape=(len(courses), len(skills_embedding)))
+for i, course in enumerate(courses):
+    # Get embedding for this course  
+    course_embedding = np.array(text_embedder.run(course)['embedding'])
 
+    # Normalize the embedding for cosine similarity later
+    courses_matrix_unit[i] = course_embedding/np.linalg.norm(course_embedding)
+
+
+# Perform cosine similarity
+course_similarity = np.dot(courses_matrix_unit, skills_embedding_unit)
+
+# argsort the courses by cosine similarity to provided skills 
+best_courses = np.argsort(course_similarity, axis=0)
+
+# Formating for output 
+print("")
+print("================================================Courses START================================================")
+
+# print best resumes w/ cosine similarity score
+for i in range(len(best_courses)-1, -1, -1):
+    print(course_similarity[best_courses[i]], courses[best_courses[i]][:112])
+# Formatting for output
+print("================================================Courses END================================================")
+print("")
 
 
 # List of work experience bullet points
@@ -89,16 +139,16 @@ for i, bullet in enumerate(work_experience):
 # Perform cosine similarity
 work_experience_similarity = np.dot(work_experience_matrix_unit, skills_embedding_unit)
 
-# argsort the bullet points 
+# Argsort the bullet points 
 best_work_experience = np.argsort(work_experience_similarity, axis=0)
 
-#Formating for output 
+# Formating for output 
 print("")
 print("================================================Work Experience START================================================")
 
 # print best resumes w/ cosine similarity score
 for i in range(len(best_work_experience)-1, -1, -1):
     print(work_experience_similarity[best_work_experience[i]], work_experience[best_work_experience[i]][:112])
-
+# Formatting for output
 print("================================================Work Experience END================================================")
 print("")
