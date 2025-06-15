@@ -37,7 +37,10 @@ skills_embedding = np.array(skills_result['embedding'])
 # Normalize the skills embedding (to allow for more efficient cosine similarity comparisons)
 skills_embedding_unit = skills_embedding/np.linalg.norm(skills_embedding)
 
-# List of skills
+
+
+
+# List of work experience bullet points
 work_experience = [
     "Drove full-stack development of a robust HR analytics platform across the full Software Development Life Cycle (SDLC), from requirements gathering and architecture design to testing and deployment, delivering production-ready features in Agile sprints and enhancing HR insights accessibility by 40%.",
     "Built a consumer-facing HR analytics dashboard using JavaScript and Chart.js, translating Neo4j knowledge graph CRUD operations into real-time time-series visualizations. Reduced HR decision latency by 40% and improved anomaly detection by 65% through continuous change monitoring.",
@@ -73,7 +76,7 @@ work_experience = [
     "Led frontend bug resolution and feature enhancements in Agile environment using GitHub, refactoring 5K+ lines of front end JavaScript, HTML5, and CSS code into modular components that improved maintainability by 50%.", 
 ]
 
-# Embedd all skills as unit length word embeddings into a single matrix
+# Embedd all bullet points as unit length word embeddings into a single matrix
 work_experience_matrix_unit = np.zeros(shape=(len(work_experience), len(skills_embedding)))
 for i, bullet in enumerate(work_experience):
     # Get embedding for this bullet  
