@@ -214,7 +214,7 @@ projects = [
         "data science", 
         "supervised learning",
         "model selection"
-    ])
+    ]),
     ("Regression Using Neural Networks | Python, Numpy, Sklearn", [
         "linear regression with polynomial features", 
         "gradient descent from scratch to train linear regression model",   
@@ -249,7 +249,7 @@ projects = [
         "Regression Modeling", 
         "Custom ML Model Implementation", 
         "Hyperparameter Tuning" 
-    ])
+    ]),
     ("Walmart Sales Forecasting | Python, Pandas, NumPy, Scikit-Learn", [
         "Led a 3-member data science team to analyze 3 years of Walmart sales data (6,435 records across 45 stores) using Python, pandas, NumPy, and scikit-learn; applied statistical hypothesis testing to uncover key sales drivers.",
         "Applied machine learning models (Decision Tree, Linear Regression, Random Forest) using K-fold cross-validation to analyze weekly sales data; identified store ID and CPI as key predictors, achieving high R-squared  and low forecast error.",
@@ -305,12 +305,87 @@ projects = [
         "Model Interpretation",
         "Supply Chain Forecasting",
         "Business Impact Analysis",
-    ])
+    ]),
     ("Object Oriented Programming and Higher Order Functions | Python", [
         "Python",
         "regex",
         "Higher order functions (HOF)"
         "Object Oriented Programming (OOP)"
+    ]),
+    ("Ribsosome | Python", [
+        "python",
+        "regex", 
+        "higher order functions (HOF)"
     ])
+    ("Regex Finite State Machine | Python", [
+        "python",
+        "regex",
+        "nondeterministic finite automata (NFA)",
+        "deterministic finite automata (DFA)",
+        "NFA to DFA", 
+        "determine if string is accepted by a regex using its finite state machine representation",
+        "implemented concat of two FSMs representing regex strings",
+        "implemented union of two FSMs representing regex strings",
+        "implemented star (Kleene closure) of a FSM representing a regex string"
+    ]),
+    ("OCamel Higher Order Function Utilities | OCamel", [
+        ""
+        "functional programming"
+        "OCamel" 
+        "implemented higher order functions (HOF) in OCamel"
+        "used HOF in OCamel to solve complex problems"
+        "Recursion"
+    ]), 
+    ("Regex Finite State Machine | OCamel", [
+        "OCamel",
+        "functional programming",
+        "Recursion",
+        "Regex",
+        "nondeterministic finite automata (NFA)",
+        "deterministic finite automata (DFA)",
+        "NFA to DFA",  
+        "determine if string is accepted by a regex using its finite state machine representation",
+        "implemented concat of two FSMs representing regex strings", 
+        "implemented union of two FSMs representing regex strings",
+        "implemented star (Kleene closure) of a FSM representing a regex string"
+    ])
+    ("Lambda Calculus Interpreter | OCamel", [
+        "OCamel", 
+        "functional programming",
+        "Recursion",
+        "parsing", 
+        "interpreting", 
+        "lexer / lexing", 
+        "lambda calculus"
+    ])
+    ("Rust Utilities | Rust", [
+        "Rust",
+        "Regex"
+    ])
+    ("Reddit Real-time Sentiment Analyzer | Python, Flask, React, Docker, Machine Learning", [
+        "python",
+        "reddit API", 
+        "docker",
+        "REST api",
+        "toml file for dependencies", 
+        "javascript",
+        "bootstrap",
+        "react",
+        "sentiment analysis", 
+        "JSON",
+        "HTTP requests",
+        "reddit data is consumed into pandas data frames",
+        "Leveraged OpenAI’s API to access ChatGPT which could provide the user with a brief summary of the topic",
+        "flair sentiment analysis",
+        "roBERTo sentiment analysis",
+        "vader (NLTK) sentiment analysis",
+        "flask",
+        "collaborated with other talented software engineers (team of 5)",
+        "machine learning" 
+    ])
+    
+
+
+
     
 ] 
