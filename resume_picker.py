@@ -11,20 +11,25 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-                Java
-                Agile Development (mentioned 5x)
-                Web UI Development (HTML, XML, XSLT, JSON)
-                Neo4j 
-                Schema 
-                Python 
-                C/C++ 
-                Eclipse 
-                JUnit
-                test driven development 
-                refactoring 
-                modular deisgn/maintainable 
-                Collaboration
-            """)
+
+Java
+JavaScript
+Object-Oriented Design (OOD)
+Relational Databases
+SQL
+Docker
+Git
+GitHub
+Agile Methodology
+Software Development Lifecycle (SDLC)
+Problem-Solving
+Version Control
+Networking Concepts
+Continuous Improvement
+Code Reviews
+Technical Documentation
+Collaboration
+ """)
 
 # Extract actual embedding as a Numpy array 
 skills_embedding = np.array(result['embedding'])
