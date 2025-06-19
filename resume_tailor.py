@@ -11,7 +11,7 @@ import fitz
 
 
 # Setup text embedder
-text_embedder = SentenceTransformersTextEmbedder(model='all-mpnet-base-v2', progress_bar=True)
+text_embedder = SentenceTransformersTextEmbedder(model='all-mpnet-base-v2', progress_bar=False)
 text_embedder.warm_up() 
 
 # Embedd the list of skills
@@ -81,7 +81,7 @@ best_courses = np.argsort(course_similarity, axis=0)
 # Formating for output 
 print("")
 print("================================================Courses START================================================")
-
+best_courses = best_courses[-10:]
 # print best resumes w/ cosine similarity score
 for i in range(len(best_courses)-1, -1, -1):
     print(course_similarity[best_courses[i]], courses[best_courses[i]][:112])
@@ -145,10 +145,11 @@ best_work_experience = np.argsort(work_experience_similarity, axis=0)
 # Formating for output 
 print("")
 print("================================================Work Experience START================================================")
-
+best_work_experience = best_work_experience[-20:]
 # print best resumes w/ cosine similarity score
 for i in range(len(best_work_experience)-1, -1, -1):
-    print(work_experience_similarity[best_work_experience[i]], work_experience[best_work_experience[i]][:112])
+    print(work_experience_similarity[best_work_experience[i]], work_experience[best_work_experience[i]])
+    print()
 # Formatting for output
 print("================================================Work Experience END================================================")
 print("")
@@ -869,6 +870,7 @@ best_projects = best_projects[-20:]
 # print best resumes w/ cosine similarity score
 for i in range(len(best_projects)-1, -1, -1):
     print(project_similarity[best_projects[i]], combined_projects[best_projects[i]])
+    print()
 # Formatting for output
 print("================================================Projects END================================================")
 print("")
