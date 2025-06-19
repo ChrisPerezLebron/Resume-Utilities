@@ -11,7 +11,7 @@ import fitz
 
 
 # Setup text embedder
-text_embedder = SentenceTransformersTextEmbedder(model='sentence-transformers/all-MiniLM-l6-v2')
+text_embedder = SentenceTransformersTextEmbedder(model='all-mpnet-base-v2', progress_bar=True)
 text_embedder.warm_up() 
 
 # Embedd the list of skills
@@ -839,3 +839,36 @@ projects = [
         "javafx for gui",
     ])
 ] 
+
+# Create a new list where each project bullet point is prefixed with it's corresponding title
+combined_projects = [] 
+for title, bullet_list in projects: 
+    for bullet in bullet_list: 
+        combined_projects.append(title + " -> " + bullet)
+
+
+# Convert combined_projects into a embedding matrix 
+projects_matrix_unit = np.zeros(shape=(len(combined_projects), len(skills_embedding)))
+for i, bullet in enumerate(combined_projects):
+    # Get embedding for this project bullet 
+    bullet_embedding = np.array(text_embedder.run(bullet)['embedding'])
+
+    # Normalize the embedding for cosine similarity later
+    projects_matrix_unit[i] = bullet_embedding/np.linalg.norm(bullet_embedding)
+
+# Perform cosine similarity
+project_similarity = np.dot(projects_matrix_unit, skills_embedding_unit)
+
+# argsort the project bullet points by cosine similarity to provided skills 
+best_projects = np.argsort(project_similarity, axis=0)
+
+# Formating for output 
+print("")
+print("================================================Projects START================================================")
+best_projects = best_projects[-20:]
+# print best resumes w/ cosine similarity score
+for i in range(len(best_projects)-1, -1, -1):
+    print(project_similarity[best_projects[i]], combined_projects[best_projects[i]])
+# Formatting for output
+print("================================================Projects END================================================")
+print("")
