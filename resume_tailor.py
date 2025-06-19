@@ -417,15 +417,15 @@ projects = [
         "python",
         "machine learning"
     ]),
-    ("Multiclass Classification and Linear Models | Python, NumPy" [
-        "python" 
-        "numpy"
-        "binary classification" 
-        "gradient descent" 
-        "loss function implementation" 
-        "perceptron  / linear classifier"
-        "multiclass classification "
-        "machine learning" 
+    ("Multiclass Classification and Linear Models | Python, NumPy", [
+        "python",
+        "numpy",
+        "binary classification",
+        "gradient descent",
+        "loss function implementation",
+        "perceptron  / linear classifier",
+        "multiclass classification",
+        "machine learning"
     ]),
     ("PCA, SoftMax, and Neural Networks | Python, NumPy, Matplotlib, SciPy", [
         "python",
@@ -447,7 +447,7 @@ projects = [
         "numpy", 
         "python",
     ]),
-    ("Color Segmentation using Gaussian Mixture Model | Python, cv2, NumPy, Matplotlib" [
+    ("Color Segmentation using Gaussian Mixture Model | Python, cv2, NumPy, Matplotlib", [
         "computer vision", 
         "color segmentation using Gaussian Mixture Model",
         "matplotlib",
@@ -821,7 +821,7 @@ projects = [
         "manipulate registers",
         "supports ADD, SUB, AND, ORR, EOR, LSL, LSR, ASR, LDR, STR, CMP, MOV, B, BEQ, and special END instructions",
         "manipulate program counter"
-    ])
+    ]),
     ("Graphical Town Explorer | Java, JUnit, JavaFX", [
         "Applied Test-Driven Development (TDD) and implemented quality assurance protocols using JUnit 5 Jupiter in a Java-based graph routing application. Designed 36 test cases covering Dijkstra's algorithm, edge validation, and exception handling, achieving 100% critical path coverage and reducing graph operation defects by 75%.",
         "Designed and implemented a maintainable Java object-oriented programming (OOP) solution for graphical town mapping software by developing custom Town, Road, and Graph classes using encapsulation and inheritance. Solved complex pathfinding challenges using Dijkstra’s algorithm, processing 100+ node networks with 40% faster runtime compared to the adjacency matrix approach.",
