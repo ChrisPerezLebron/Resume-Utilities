@@ -2,6 +2,7 @@ from haystack.components.embedders import SentenceTransformersTextEmbedder
 import numpy as np 
 import os 
 import fitz
+from collections import defaultdict
 
 #Goal:
     #based on the sentence embedding of a list of skills, argsort the following resume items 
@@ -865,12 +866,36 @@ best_projects = np.argsort(project_similarity, axis=0)
 
 # Formating for output 
 print("")
-print("================================================Projects START================================================")
-best_projects = best_projects[-20:]
+print("================================================Projects RAW START================================================")
+best_projects_short = best_projects[-20:]
 # print best resumes w/ cosine similarity score
-for i in range(len(best_projects)-1, -1, -1):
-    print(project_similarity[best_projects[i]], combined_projects[best_projects[i]])
+for i in range(len(best_projects_short)-1, -1, -1):
+    print(project_similarity[best_projects_short[i]], combined_projects[best_projects_short[i]])
     print()
 # Formatting for output
-print("================================================Projects END================================================")
+print("================================================Projects RAW END================================================")
+print("")
+
+#find and print best project along with it's bullet points in order of best score
+dict = defaultdict(list)
+best = None
+for i in range(len(best_projects)-1, -1, -1):
+    title, bullet = combined_projects[i].split("->")
+    dict[title].append((project_similarity[best_projects[i]], bullet))
+    # the best project is the first project to get 3 bullet points when traversing project bullet point cosine similarity in descending order
+    if len(dict[title]) == 3 and best is None:
+        best = title
+
+# Formatting for output
+print("")
+print("================================================Project START================================================")
+print(best)
+
+# Print each bullet point in the best project along with its cosine similarity to the provided list of skills 
+for similarity, bullet in dict[best]: 
+    print(similarity, bullet)
+    print()
+
+# Formatting for output
+print("================================================Project END================================================")
 print("")
