@@ -17,19 +17,24 @@ text_embedder.warm_up()
 
 # Embedd the list of skills
 skills_result = text_embedder.run("""
-                Java
-                Agile Development (mentioned 5x)
-                Web UI Development (HTML, XML, XSLT, JSON)
-                Neo4j 
-                Schema 
-                Python 
-                C/C++ 
-                Eclipse 
-                JUnit
-                test driven development 
-                refactoring 
-                modular deisgn/maintainable 
-                Collaboration
+        Embedded Software Development
+        Software Verification
+        Secure Development
+        Software Development
+        C Programming
+        Python Proficiency
+        Embedded Debugging
+        Software Building
+        Virtual Machines
+        Debugging
+        Scripting
+        Microprocessor Architecture
+        GDB (GNU Debugger)
+        Containers
+        Collaboration with Product Development
+        Proof of Concept (PoC) Development
+        Technical Consulting/Support
+        Standards & Implementation Guidance
             """)
 
 # Extract actual embedding as a Numpy array 
@@ -122,7 +127,8 @@ work_experience = [
     "Visualized Human Resource information highlighting skills, certifications, and clearances held by the internal workforce using HTML5, CSS, JavaScript, and Alchemy.js, producing relationship visualization components that decreased user errors by 25% in node creation workflows.",
     "Developed knowledge graph-based search and Natural Language Processing features including autocomplete functionality using Cypher query language, enabling complex relationship mapping across 200+ nodes which improved HR data query efficiency by 60%",
     "Integrated Flask REST APIs with JavaScript frontend using AJAX/jQuery, developing dynamic node/relationship management interfaces that reduced CRUD operation time by 30% through real-time form validation and modal-based editing.",
-    "Containerized applications using Docker for AWS cloud deployment while documenting 20+ API endpoints and code functionality, improving onboarding efficiency by 50% for new Software Engineering hires.",
+    "Containerized microservices using Docker to enable scalable deployment on AWS, streamlining the CI/CD pipeline and reducing deployment errors by 30%.",
+    "Documented 20+ API endpoints and internal code functionality, accelerating onboarding speed by 50% for new software engineering hires.",
     "Created data ingestion systems using Pandas to process CSV data into Neo4j knowledge graphs, streamlining the ingestion of over 200+ nodes and 100+ relationships.",
     "Led frontend bug resolution and feature enhancements in Agile environment using GitHub, refactoring 5K+ lines of front end JavaScript, HTML5, and CSS code into modular components that improved maintainability by 50%.", 
 ]
@@ -880,7 +886,7 @@ print("")
 dict = defaultdict(list)
 best = None
 for i in range(len(best_projects)-1, -1, -1):
-    title, bullet = combined_projects[i].split("->")
+    title, bullet = combined_projects[best_projects[i]].split("->")
     dict[title].append((project_similarity[best_projects[i]], bullet))
     # the best project is the first project to get 3 bullet points when traversing project bullet point cosine similarity in descending order
     if len(dict[title]) == 3 and best is None:
