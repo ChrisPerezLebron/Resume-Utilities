@@ -1,0 +1,47 @@
+================================================Courses START================================================
+0.480343647191638 CMSC216 - Intro to Computer Systems (C/C++, ARM Assembly)
+0.4184089860463032 CMSC330 - Organization of Programming Languages (Python, OCamel, Rust)
+0.37595316343142515 CMSC203 - Computer Science I - Object Oriented Programming (Java)
+0.3287356114393462 CMSC416 - Intro to Parallel Computing (C/C++, Cuda)
+0.3122694635511678 CMSC140 - Intro to Programming (C++)
+0.30978673136118895 CMSC430- Intro to Compilers (Racket, x86)
+0.27623654706507506 ENGL393 - Technical Writting
+0.2751025870397244 CMSC421 - Intro to Artificial Intelligence (Python)
+0.2692179572230807 CMSC470 - Intro to Natural Language Processing (Python)
+0.257059877611744 ENES100 - Intro to Engineering Design
+================================================Courses END================================================
+
+================================================Work Experience START================================================
+0.5352037205083755 Programmed Arduino microcontrollers in C/C++ to design and debug digital circuits (button-controlled LED matrices, sensor-triggered fans), implementing GPIO manipulation and interrupt handling to advance foundational hardware and embedded systems knowledge.
+0.5193383915953014 Documented 20+ API endpoints and internal code functionality, accelerating onboarding speed by 50% for new software engineering hires.
+0.47192952340360883 Led Docker containerization and deployment of a consumer-facing HR analytics platform to AWS, collaborating cross-functionally with engineers, cybersecurity, and C-suite stakeholders to improve application availability and enable scalable production rollout.
+0.45720759810184103 Deployed a containerized application to AWS using Docker on a Linux instance, resolving port conflicts over TCP/IP and accelerating future deployments by 40%. Simulated the production environment locally with VMware and VirtualBox, and managed AWS servers via CLI tools.
+0.44182170741525445 Created comprehensive repository wiki documentation for graph schemas and RESTful API endpoints, improving onboarding efficiency by 50% for new developers while standardizing data ingestion protocols.
+0.41366924535067773 Led product research and requirements analysis by evaluating Obsidian’s features and workflows, translating insights into system design and Neo4j schema architecture. This approach enabled the full-stack team to reduce development time by 25% and deliver an internal talent-tracking web app more efficiently.
+0.3851955190370289 Containerized an HR analytics platform using Docker to enable scalable deployment on AWS, streamlining the CI/CD pipeline and reducing deployment errors by 30%.
+0.37670452479311706 Collaborated closely with a team of three Software Engineers to build a full-stack web application using Python and Flask for the backend, and HTML, CSS, JavaScript, and Bootstrap for the frontend, while fostering effective communication that accelerated development and enabled delivery two weeks ahead of schedule.
+================================================Work Experience END================================================
+
+================================================Projects RAW START================================================
+0.37622762548557326 Parallel Performance Analysis Tools | Python, OpenMP, MPI, HPCToolkit, Caliper, Hatchet -> Analyzed the C++ LULESH codebase to extract exclusive-time metrics with HPCToolkit, identifying key functions responsible for performance bottlenecks.
+0.37514530603563007 Simulated CPU Running ARM | C, ARM Assembly -> supports ADD, SUB, AND, ORR, EOR, LSL, LSR, ASR, LDR, STR, CMP, MOV, B, BEQ, and special END instructions
+0.3708929792827728 Racket Compiler: Pattern Matching | Racket, C, x86 Assembly -> Resolved 15+ segmentation faults in memory pointer operations by debugging x86 instruction traces using GDB/LLDB. Utilized systematic watchpoint analysis to identify and correct pointer dereferencing and memory allocation issues.
+0.36501112625176757 Parallel Performance Analysis Tools | Python, OpenMP, MPI, HPCToolkit, Caliper, Hatchet -> Troubleshot compiler errors and dependency conflicts related to MPI and OpenMP settings, ensuring a stable build environment for performance experimentation.
+0.35872068716015776 Racket Compiler: Pattern Matching | Racket, C, x86 Assembly -> Utilized Test-Driven Development (TDD) with the RackUnit framework to guide compiler development, applying functional programming principles. Wrote 150+ test cases covering 15+ Racket language features (e.g., arithmetic, I/O, pattern matching), which ensured correctness and reduced logic errors by 95% through thorough edge-case coverage.
+0.35540051812191925 Parallel Performance Analysis Tools | Python, OpenMP, MPI, HPCToolkit, Caliper, Hatchet -> Used nano and Linux command line interface (CLI) tools for on-cluster code editing and configuration.
+0.3544134704140156 Parallel Performance Analysis Tools | Python, OpenMP, MPI, HPCToolkit, Caliper, Hatchet -> Built LULESH from source using CMake, ensuring compatibility with MPI and leveraging compiler flags for optimal performance.
+0.35156894133852423 Parallel Performance Analysis Tools | Python, OpenMP, MPI, HPCToolkit, Caliper, Hatchet -> Remotely accessed Zaratan’s login nodes via SSH to develop performance analysis scripts directly on the HPC system, ensuring environment compatibility and fast iteration.
+0.34892862117288714 Parallel Performance Analysis Tools | Python, OpenMP, MPI, HPCToolkit, Caliper, Hatchet -> Used Git for version control to manage and track changes across profiling scripts, supporting real-time debugging and ensuring reproducibility across HPC job executions.
+================================================Projects RAW END================================================
+
+================================================Project START================================================
+Parallel Performance Analysis Tools | Python, OpenMP, MPI, HPCToolkit, Caliper, Hatchet 
+0.37622762548557326  Analyzed the C++ LULESH codebase to extract exclusive-time metrics with HPCToolkit, identifying key functions responsible for performance bottlenecks.
+0.36501112625176757  Troubleshot compiler errors and dependency conflicts related to MPI and OpenMP settings, ensuring a stable build environment for performance experimentation.
+0.35540051812191925  Used nano and Linux command line interface (CLI) tools for on-cluster code editing and configuration.
+0.3544134704140156  Built LULESH from source using CMake, ensuring compatibility with MPI and leveraging compiler flags for optimal performance.
+0.35156894133852423  Remotely accessed Zaratan’s login nodes via SSH to develop performance analysis scripts directly on the HPC system, ensuring environment compatibility and fast iteration.
+0.34892862117288714  Used Git for version control to manage and track changes across profiling scripts, supporting real-time debugging and ensuring reproducibility across HPC job executions.
+0.34814302183383034  Wrote cluster-compatible Bash scripts to automate job submission and environment setup, managing directory structures and software dependencies, enabling repeatable workflows for consistent SLURM job execution.
+================================================Project END================================================
+
