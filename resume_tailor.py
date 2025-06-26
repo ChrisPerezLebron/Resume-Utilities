@@ -17,24 +17,30 @@ text_embedder.warm_up()
 
 # Embedd the list of skills
 skills_result = text_embedder.run("""
-        Embedded Software Development
-        Software Verification
-        Secure Development
-        Software Development
-        C Programming
-        Python Proficiency
-        Embedded Debugging
-        Software Building
-        Virtual Machines
-        Debugging
-        Scripting
-        Microprocessor Architecture
-        GDB (GNU Debugger)
-        Containers
-        Collaboration with Product Development
-        Proof of Concept (PoC) Development
-        Technical Consulting/Support
-        Standards & Implementation Guidance
+React
+Python
+Full-stack development
+AI-powered development
+Production code
+Software architecture
+High-pressure environment adaptability
+Results-driven mindset
+Rapid learning ability
+Strong work ethic
+Creative problem-solving
+Excellent communication
+Technical mindset
+Shipping products (not just coding)
+Exploring novel technologies
+Interest in future of software engineering
+Building for production environments
+Using latest AI development tools
+Delivering results over documentation
+Continuous learning (#1 priority)
+Startup/growth-stage mentality
+Emerging technology industries focus
+Regulatory/security platform development
+Novel technology exploration
             """)
 
 # Extract actual embedding as a Numpy array 
@@ -98,13 +104,17 @@ print("")
 
 # List of work experience bullet points
 work_experience = [
+    "Integrated OpenAI’s API into a retrieval-augmented generation pipeline for question answering, using Jinja templates to engineer few-shot prompts that combined explicit task instructions with example outputs and the most relevant knowledge graph subsets retrieved via vector embedding similarity, resulting in an 80% improvement in response accuracy.",
+    "Built a retrieval-augmented generation (RAG) pipeline that empowered HR professionals to ask high-level, natural language questions against a structured knowledge graph, leveraging OpenAI’s API and Jinja-based prompt engineering to deliver highly accurate responses, improving overall decision-making efficiency.",
+    "Leveraged ChatGPT and DeepSeek to help break down development hurdles speeding up implementation and decreasing my use of administrative resources.",
+    "Utilized Secure File Transfer Protocol (SFTP) to send files to the AWS instance hosting our web application.",
     "Implemented 50+ REST API endpoints for handling JSON payloads and HTTP requests, reducing CRUD operation time by 30% through dynamic AJAX components and modular design patterns.",
     "Drove full-stack development of a robust HR analytics platform across the full Software Development Life Cycle (SDLC), from requirements gathering and architecture design to testing and deployment, delivering production-ready features in Agile sprints and enhancing HR insights accessibility by 40%.",
     "Built a consumer-facing HR analytics dashboard using JavaScript and Chart.js, translating Neo4j knowledge graph CRUD operations into real-time time-series visualizations. Reduced HR decision latency by 40% and improved anomaly detection by 65% through continuous change monitoring.",
     "Led product research and requirements analysis by evaluating Obsidian’s features and workflows, translating insights into system design and Neo4j schema architecture. This approach enabled the full-stack team to reduce development time by 25% and deliver an internal talent-tracking web app more efficiently.",
     "Engineered retrieval-augmented generation (RAG) pipelines for our HR knowledge graph application, implementing bidirectional relationship extraction and token optimization strategies that improved context relevance by 50% while troubleshooting GPU acceleration to reduce model inference latency by 30%.",
     "Programmed Arduino microcontrollers in C/C++ to design and debug digital circuits (button-controlled LED matrices, sensor-triggered fans), implementing GPIO manipulation and interrupt handling to advance foundational hardware and embedded systems knowledge.",
-    "Led Docker containerization and deployment of a consumer-facing HR analytics platform to AWS, collaborating cross-functionally with engineers, cybersecurity, and C-suite stakeholders to improve application availability and enable scalable production rollout.", #= to next 
+    "Led Docker containerization and deployment of a consumer-facing HR analytics platform to AWS, collaborating cross-functionally with engineers, cybersecurity specialists, and C-suite stakeholders to improve application availability and enable scalable production rollout.", #= to next 
     "Deployed a containerized application to AWS using Docker on a Linux instance, resolving port conflicts over TCP/IP and accelerating future deployments by 40%. Simulated the production environment locally with VMware and VirtualBox, and managed AWS servers via CLI tools.", #= to prior
     "Delivered maintainable Neo4j CRUD operations to manage 100+ employee records, enhancing backend data handling and platform scalability.", 
     "Developed knowledge graph embeddings using Neo4j's vector indexing capabilities, leveraging cosine similarity search that improved node relationship discovery accuracy by 55% for our AI-powered HR analytics web application.",
@@ -112,11 +122,11 @@ work_experience = [
     "Designed and built responsive UI components with Bootstrap and jQuery, integrating asynchronous HTTP handlers to efficiently render backend JSON payloads and reduce load times by 35% in large-scale knowledge graph visualizations.",
     "Developed and configured Neo4j vector search indexes to support graph embeddings, enabling semantic similarity comparisons that enhanced response accuracy in the question-answering RAG (Retrieval-Augmented Generation) ML pipeline by 75%.",
     "Engineered HR knowledge graph solutions using Neo4j and Cypher queries, collaborating with three software engineers to implement graph-based search and Natural Language Processing capabilities that reduced data retrieval time by 65%",
-    "Developed Python/Flask RESTful API endpoints with OpenAI integration for resume parsing, implementing prompt engineering with Jinja templates to extract 15+ entity types from documents, improving data extraction accuracy by 40% while ingesting data far faster than manual input.",
+    "Developed Python/Flask RESTful API endpoints with OpenAI integration for resume parsing, using prompt engineering and Jinja templates to extract structured data including skills, education, and certifications from resumes, increasing extraction accuracy by 40% and significantly reducing manual input time.",
     "Engineered a full-stack knowledge graph application with a Python/Flask backend and JavaScript/Bootstrap frontend, implementing dynamic AJAX/jQuery UI components and real-time form validation that cut CRUD operation time by 30%.", #= to next
     "Engineered a full-stack knowledge graph application using Python/Flask backend and JavaScript/Bootstrap frontend, collaborating with 3 software engineers to implement 15+ REST API endpoints for CRUD operations on Neo4j graph databases, reducing data retrieval latency by 40% through optimized Cypher queries.", #= to prior
     "Collaborated closely with a team of three Software Engineers to build a full-stack web application using Python and Flask for the backend, and HTML, CSS, JavaScript, and Bootstrap for the frontend, while fostering effective communication that accelerated development and enabled delivery two weeks ahead of schedule.",
-    "Designed a CSV data ingestion pipeline using Python, Flask, and Pandas, creating an adjacency list parser that reduced data loading complexity by 70% while implementing null-handling safeguards that significantly increased data integrity.",
+    "Developed a flexible data ingestion pipeline in Python using Flask for API integration and Pandas for data processing, enabling quick graph node creation from search bar input or CSV upload via a custom adjacency list syntax, cutting data loading complexity by 70%",
     "Revamped user interfaces with Bootstrap/CSS, implementing modal-based editing and autocomplete search that decreased user errors by 45% in node-relationship management workflows.", 
     "Integrated OpenAI API for question answering, retrieval-augmented generation, leveraged Jinja to perform prompt engineering, which improved response accuracy by 80% while implementing usage caps to control API costs.",
     "Created comprehensive repository wiki documentation for graph schemas and RESTful API endpoints, improving onboarding efficiency by 50% for new developers while standardizing data ingestion protocols.",
@@ -125,11 +135,12 @@ work_experience = [
     "Refactored 5,000+ lines of Python, HTML, and JavaScript code in an Agile environment using Git, resolving 15+ critical bugs while improving maintainability and reliability by 90%.",
     "Researched Hugging Face models and vector embeddings to utilize in retrieval augmented generation against the data in our knowledge graph application, prototyping local Large Language Model solutions that demonstrated 50% faster query resolution for candidate search scenarios.",
     "Designed responsive user interfaces with Bootstrap/Jinja templates, implementing dynamic layouts by leveraging AJAX and jQuery to modify page layouts without necessitating page refresh, resulting in a more satisfying user experience.",
-    "Visualized Human Resource information highlighting skills, certifications, and clearances held by the internal workforce using HTML5, CSS, JavaScript, and Alchemy.js, producing relationship visualization components that decreased user errors by 25% in node creation workflows.",
+    "Developed interactive relationship visualizations with Alchemy.js that enabled users to intuitively input and link personnel data, reducing user errors by 25%.",
+    "Visualized Human Resource information highlighting skills, certifications, and clearances held by the internal workforce using HTML5, CSS, JavaScript, and Alchemy.js, producing relationship visualization components that decreased user errors by 25% in graph node and relationship creation workflows.",
     "Developed knowledge graph-based search and Natural Language Processing features including autocomplete functionality using Cypher query language, enabling complex relationship mapping across 200+ nodes which improved HR data query efficiency by 60%",
-    "Integrated Python/Flask RESTful API endpoints with JavaScript frontend using AJAX and jQuery, developing dynamic node/relationship management interfaces that reduced CRUD operation time by 30% through real-time form validation and modal-based editing.",
+    "Integrated Python/Flask RESTful API endpoints a with JavaScript frontend using AJAX and jQuery, developing dynamic node/relationship management interfaces that reduced CRUD operation time by 30% through real-time form validation and modal-based editing.",
     "Containerized an HR analytics platform using Docker to enable scalable deployment on AWS, streamlining the CI/CD pipeline and reducing deployment errors by 30%.",
-    "Documented 20+ API endpoints and internal code functionality, accelerating onboarding speed by 50% for new software engineering hires.",
+    "Documented 20+ RESTful API endpoints and internal code functionality, accelerating onboarding speed by 50% for new software engineering hires.",
     "Created data ingestion systems using Pandas to process CSV data into Neo4j knowledge graphs, streamlining the ingestion of over 200+ nodes and 100+ relationships.",
     "Led frontend bug resolution and feature enhancements in Agile environment using GitHub, refactoring 5K+ lines of front end JavaScript, HTML5, and CSS code into modular components that improved maintainability by 50%.", 
 ]
@@ -167,26 +178,25 @@ print("")
     #but we embedd projectTitle+bulletPoint for each bullet point to find most relevant project experience
 projects = [
     ("SQL Data Analysis | SQL, Pyhon", [
-        "Python",
-        "SQLite",
-        "Pandas",
-        "SQL",
-        "SQL queries",
-        "Data Analysis",
-        "Data Aggregation",
-        "SQL Table Creation",
-        "SQL Table Joining (using inner join)",
-        "Pandas DataFrame",
-        "Data Filtering",
-        "Data Sorting",
-        "Data Summarization",
-        "Relational Databases",
-        "Data Manipulation",
-        "SQL Functions",
-        "Data Exploration",
-        "SQL Table Design",
-        "Large Kaggle Datasets",
-        "Data Cleaning"
+        "Executed complex SQL queries to extract and analyze employee compensation data, applying data filtering, sorting, and summarization techniques to uncover key workforce insights.",
+        "Utilized SQL aggregation functions to compute summary statistics such as average pay for each position, enhancing understanding of compensation trends.",
+        "Executed complex multi-clause SQL queries for compensation analysis across 100k+ records, incorporating filtering, sorting, and aggregation to identify compensation trends.", 
+        "Queried 100K+ rows of employee data using SQL (SELECT, WHERE, ORDER BY) to identify high-earning employees hired in 2012, sorted by descending salary.",
+        "Loaded SQL query results into Pandas DataFrames for further transformation and analysis in Python, enabling scalable processing of 100K+ employee records.",
+        "Used SQL (SELECT, GROUP BY, AVG(), ROUND(), AS) to calculate and rename average compensation by hire year, streamlining insights from 100K+ employee records.",
+        "Generated detailed compensation summaries per job title by using SQL aggregation functions (AVG, ROUND) and column aliasing on 100K+ observations to uncover salary, benefits, overtime, and total compensation averages.",
+        "Automated the extraction and partitioning of employee salary data by hire year using SQL queries and Python loops; utilized pandas.read_sql() and pandas.to_sql() to create year-specific tables from a dataset of 100K+ records.",
+        "Performed SQL INNER JOIN on director_id to combine 7K+ rows of movie and director data, enriching the dataset for relational insights.",
+        "Built an aggregated analysis to uncover the top 5 directors by average IMDB rating using SQL (INNER JOIN, GROUP BY, ORDER BY, AVG, LIMIT) on 7K+ movie records.",
+        "Identified the top 5 directors by average movie budget through SQL queries involving joins, grouping, sorting, and limiting functions on a dataset of 7K+ entries.",
+        "Applied advanced SQL functions in SQLite to execute multi-clause queries involving filtering, sorting, grouping, and aggregation across 100K+ records, delivering actionable insights from large Kaggle datasets.",
+        "Performed rigorous data analysis and exploration on employee compensation and movie datasets by using SQL GROUP BY, AVG, ROUND, and conditional logic to surface key trends and outliers.", 
+        "Engineered SQL-based data aggregation pipelines to generate summary statistics (e.g., average salary by position and hire year), enabling better understanding of workforce and industry-level metrics.",
+        "Joined multiple relational tables with INNER JOIN on foreign keys (e.g., director_id) to enrich datasets with hierarchical metadata, supporting advanced aggregation like top-5 rankings by average rating and budget.",
+        "Built automated SQL workflows using Python loops and Pandas to extract, process, and organize 100K+ rows of salary data, showcasing effective use of SQL table design and data handling in Python.",
+        "Leveraged SQL in a SQLite environment to process and analyze large-scale Kaggle datasets, demonstrating strong command over relational data modeling, query optimization, and real-world dataset manipulation."
+        "Designed and implemented custom SQL tables to manage and analyze large-scale datasets, using Python and Pandas to support efficient data storage and querying across 100K+ records."
+        "Explored and analyzed 100K+ records of employee and movie data, using multi-clause SQL queries (WHERE, GROUP BY, ORDER BY, AVG, ROUND) to identify compensation trends and top-performing directors, demonstrating strong data exploration capabilities.",
     ]),
     ("Wine Data Analysis | Python, Numpy, Matplotlib", [
         "python",
@@ -372,25 +382,35 @@ projects = [
         "Regex"
     ]),
     ("Reddit Real-time Sentiment Analyzer | Python, Flask, React, Docker, Machine Learning", [
-        "python",
-        "reddit API", 
-        "docker",
-        "REST api",
-        "toml file for dependencies", 
-        "javascript",
-        "bootstrap",
-        "react",
-        "sentiment analysis", 
-        "JSON",
-        "HTTP requests",
-        "reddit data is consumed into pandas data frames",
-        "Leveraged OpenAI’s API to access ChatGPT which could provide the user with a brief summary of the topic",
-        "flair sentiment analysis",
-        "roBERTo sentiment analysis",
-        "vader (NLTK) sentiment analysis",
-        "flask",
-        "collaborated with other talented software engineers (team of 5)",
-        "machine learning" 
+        "python was used as the backend language, combined with flask it served as our backend service and the host for our sentiment analysis",
+        "leveraged the reddit API to get current conversations about a user specified topic for sentiment analysis", 
+        "utilized docker to streamline deployment to AWS",
+        "created a RESTful api for seamless communication with the react front end",
+        "utilized a toml file to document dependencies", 
+        "utilized javascript and react to build an elegant front end",
+        "leveraged bootstrap on the front end to quickly style components ",
+        "Utilized reacts state management and asynchornous operations to make our website more dynamic",
+        "performed sentiment analysis on fresh reddit data to give the user an idea of the public sentiment on a given topic", 
+        "Handled JSON payloads from the reddit API, extracting conversations for sentiment analysis",
+        "Interacted with the backend and the reddit API via HTTP requests",
+        "reddit data was consumed into pandas data frames to improve backend processing",
+        "Leveraged OpenAI’s API to access ChatGPT which could provide the user with a brief summary of the topic given a subset of the discussion",
+        "used flair, roBERTo, and vader (NLTK) to perform sentiment analysis on real reddit posts centered around a user specified topic",
+        "Leveraged flask to build a RESTful API",
+        "Collaborated in a team of 5 Software Engineers to build a full-stack web application delivering real-time Reddit sentiment analysis.",
+        "used machine learning and natural language processing in the form of sentiment analysis to provide the user with insights on user sentiment.",
+        "created a unified data visualization that would display sentiment as an easy to understand gauge which would dynamically update as sentiment data streams in. The data was streamed as it was ready.",
+        "Developed backend using Python and Flask to perform sentiment analysis and serve processed results to the frontend via RESTful APIs.",
+        "Built frontend with React, leveraging state management and asynchronous operations for dynamic user interactions.",
+        "Integrated sentiment analysis models including VADER, RoBERTa, and Flair to analyze Reddit discussions on user-specified topics."
+        "Designed and implemented RESTful APIs to enable seamless frontend-backend communication.",
+        "Utilized the Reddit API to extract and preprocess live discussion data; handled JSON payloads and parsed relevant content.",
+        "Processed and structured incoming data using Pandas for improved performance in backend computation.",
+        "Leveraged OpenAI’s ChatGPT API to generate real-time summaries of Reddit topics based on filtered conversation threads.",
+        "Containerized the application using Docker and deployed to AWS for scalable access and streamlined development.",
+        "Created real-time data visualizations including sentiment gauges that dynamically updated as new data streamed in.",
+        "Applied Bootstrap and custom CSS to design a responsive, user-friendly frontend interface.",
+        "Documented dependencies and environment configuration using a TOML file for consistent team development."
     ]),
     ("Image Classification Using Convolutional Neural Networks | Python, Pytorch, Pandas, Machine Learning", [
         "python",
@@ -700,7 +720,7 @@ projects = [
     ("Parallel Performance Analysis Tools | Python, OpenMP, MPI, HPCToolkit, Caliper, Hatchet", [
         "Generated performance reports using Hatchet by loading and parsing Caliper-generated JSON datasets, enabling function-level execution time analysis across 1, 8, 27, and 64-core executions.",
         "Utilized Hatchet.from_caliper() to parse JSON-based performance profiles from Caliper into accessible graphframes, enabling function-level time analysis in Python.",
-        "Employed pandas dataframe operations to filter and sort function performance data, identifying top-N time-consuming functions across different core counts for performance analysis.",
+        "Employed pandas dataframe operations to filter and sort performance data, identifying top-N time-consuming functions across different core counts for performance analysis.",
         "Automated function-level analysis for performance bottlenecks by sorting on exclusive time and printing function names and times, improving visibility into computational hotspots.",
         "Analyzed imbalance across MPI processes by applying Hatchet’s load_imbalance() function to performance profiles obtained using HPCToolkit and sorted the results based on imbalance values using pandas.",
         "Subtracted performance graphframes between 8-core and 64-core datasets using Hatchet to compute time deltas, identifying functions with the largest time increase due to poor scalability.",
@@ -718,7 +738,7 @@ projects = [
         "Conducted scaling analysis by comparing exclusive time metrics across increasing core counts, identifying diminishing returns in performance improvement beyond 27 cores.",
         "Developed Python scripts to extract and print top-N time-consuming functions using Hatchet’s dataframe API, improving visibility into computational hotspots.",
         "Remotely accessed Zaratan’s login nodes via SSH to develop performance analysis scripts directly on the HPC system, ensuring environment compatibility and fast iteration.",
-        "Used Git for version control to manage and track changes across profiling scripts, supporting real-time debugging and ensuring reproducibility across HPC job executions.",
+        "Used Git for version control to manage and track changes across profiling scripts, supporting real-time debugging and ensuring reproducibility across high-performance computing (HPC) job executions.",
         "Troubleshot compiler errors and dependency conflicts related to MPI and OpenMP settings, ensuring a stable build environment for performance experimentation.",
         "Analyzed the C++ LULESH codebase to extract exclusive-time metrics with HPCToolkit, identifying key functions responsible for performance bottlenecks."
     ]),
