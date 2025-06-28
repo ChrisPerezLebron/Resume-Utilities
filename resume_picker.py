@@ -11,24 +11,63 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-
-Java
-JavaScript
-Object-Oriented Design (OOD)
-Relational Databases
-SQL
-Docker
+iOS Development
+Swift
+Objective-C
+Cocoa Touch
+iOS SDK
+Core Animation
+Mobile Applications
+RESTful APIs
+JSON
+XML
+XHTML
 Git
-GitHub
-Agile Methodology
+Agile Development
+Unit Testing
+UI Testing
+Concurrency
+Multi-threaded Programming
+Computer Science Fundamentals
+Data Structures
+Algorithms
+Operating Systems
+Agile
+MVP (Model-View-Presenter)
+MVVM (Model-View-ViewModel)
 Software Development Lifecycle (SDLC)
-Problem-Solving
-Version Control
-Networking Concepts
-Continuous Improvement
-Code Reviews
-Technical Documentation
+Problem Solving
+Full Stack Development (awareness/readiness)
+JUnit
+Mockito
+Robolectric
+Espresso
+Python (scripting)
+Ruby (scripting)
+Groovy (scripting)
+Bash (scripting)
+Smart Home Assistants (e.g., Alexa, Google Home integration)
+Scripting (Python, Ruby, Groovy, Bash)
+Server-Side API Development
+Architectural Patterns (MVP, MVVM)
+Video Analytics (mentioned in company info)
+Machine Learning (mentioned in company info)
 Collaboration
+Cross-functional Teamwork
+Communication Skills (Verbal & Written)
+Attention to Detail
+Quality Focus
+Problem Solving
+Analytical Skills
+Self-starter
+Passion for Technology
+Ownership/Accountability
+Customer Experience
+High Volume Systems
+Millions of Users
+Cloud Platform (Alarm.com context)
+Internet of Things (IoT)
+Bachelor's Degree in Computer Science (or similar)
  """)
 
 # Extract actual embedding as a Numpy array 
