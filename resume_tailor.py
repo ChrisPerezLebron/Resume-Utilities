@@ -104,6 +104,9 @@ print("")
 
 # List of work experience bullet points
 work_experience = [
+    "Logged changes in the knowledge graph and displayed these changes on the admin dashboard for review by HR leaders.",
+    "Created user authentication page using popular password encryption libraries.",
+    "Leveraged sharepoint.",
     "Integrated OpenAI’s API into a retrieval-augmented generation pipeline for question answering, using Jinja templates to engineer few-shot prompts that combined explicit task instructions with example outputs and the most relevant knowledge graph subsets retrieved via vector embedding similarity, resulting in an 80% improvement in response accuracy.",
     "Built a retrieval-augmented generation (RAG) pipeline that empowered HR professionals to ask high-level, natural language questions against a structured knowledge graph, leveraging OpenAI’s API and Jinja-based prompt engineering to deliver highly accurate responses, improving overall decision-making efficiency.",
     "Leveraged ChatGPT and DeepSeek to help break down development hurdles speeding up implementation and decreasing my use of administrative resources.",
