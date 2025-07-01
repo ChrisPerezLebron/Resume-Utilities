@@ -11,41 +11,42 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-Full-Stack Development
-Scalable Systems Design
-Web Applications
-API Development (Public APIs)
-Node.js (Preferred, not mandatory)
-Relational Databases (PostgreSQL)
-Analytical Databases
-Backend Services
-System Architecture
-Cross-Functional Collaboration
-Stakeholder Management
-Technical Requirement Translation
-Problem Structuring & Prioritization
-Ownership & Initiative
-Navigating Ambiguity
-Adaptability to Change
-Technical Communication (Written & Verbal)
-Non-Technical Communication
-Customer Pain Point Analysis
-High Standards & Accountability
-Agile Methodologies (Sprints)
-Distributed Ownership
-Psychological Safety (Team Culture)
-Blockchain Data (Bonus, not mandatory)
-Internal Tools Development
-Product Engineering
-Financial Security Systems (Implied by mission)
-Fast-Paced Environment
-Mission-Driven Mindset
-Remote Collaboration
-Impact-Oriented Delivery
-Ruthless Prioritization
-Velocity & Quality Balance
-End-to-End Project Leadership
-On-Call Support Experience
+Salesforce Conga CPQ
+Salesforce Conga CLM
+Salesforce Configuration
+Salesforce Customization
+Workflows (Salesforce)
+Process Builder (Salesforce)
+Validation Rules (Salesforce)
+Custom Objects (Salesforce)
+Salesforce Best Practices
+Salesforce Implementation
+Salesforce Design
+Salesforce Architecture
+SQL Programming
+Java Programming
+Python Programming
+Agile Methodologies
+Agile Team Environment
+System Integration
+Technical Expertise
+Stakeholder Communication
+Collaboration
+Troubleshooting
+Debugging
+Testing
+Analysis
+Business Systems
+Computer Science (Bachelor's degree)
+CPQ/CLM Implementation
+Salesforce Reports
+Salesforce Dashboards
+Architecture Collaboration
+Technical Guidance
+Requirements Gathering
+Adaptability
+Service-Oriented
+Curiosity
  """)
 
 # Extract actual embedding as a Numpy array 
