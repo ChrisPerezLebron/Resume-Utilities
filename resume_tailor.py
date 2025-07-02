@@ -141,7 +141,7 @@ work_experience = [
     "Developed interactive relationship visualizations with Alchemy.js that enabled users to intuitively input and link personnel data, reducing user errors by 25%.",
     "Visualized Human Resource information highlighting skills, certifications, and clearances held by the internal workforce using HTML5, CSS, JavaScript, and Alchemy.js, producing relationship visualization components that decreased user errors by 25% in graph node and relationship creation workflows.",
     "Developed knowledge graph-based search and Natural Language Processing features including autocomplete functionality using Cypher query language, enabling complex relationship mapping across 200+ nodes which improved HR data query efficiency by 60%",
-    "Integrated Python/Flask RESTful API endpoints a with JavaScript frontend using AJAX and jQuery, developing dynamic node/relationship management interfaces that reduced CRUD operation time by 30% through real-time form validation and modal-based editing.",
+    "Integrated Python/Flask RESTful API endpoints with a JavaScript frontend using AJAX and jQuery, developing dynamic node/relationship management interfaces that reduced CRUD operation time by 30% through real-time form validation and modal-based editing.",
     "Containerized an HR analytics platform using Docker to enable scalable deployment on AWS, streamlining the CI/CD pipeline and reducing deployment errors by 30%.",
     "Documented 20+ RESTful API endpoints and internal code functionality, accelerating onboarding speed by 50% for new software engineering hires.",
     "Created data ingestion systems using Pandas to process CSV data into Neo4j knowledge graphs, streamlining the ingestion of over 200+ nodes and 100+ relationships.",
