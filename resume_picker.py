@@ -11,42 +11,48 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-Salesforce Conga CPQ
-Salesforce Conga CLM
-Salesforce Configuration
-Salesforce Customization
-Workflows (Salesforce)
-Process Builder (Salesforce)
-Validation Rules (Salesforce)
-Custom Objects (Salesforce)
-Salesforce Best Practices
-Salesforce Implementation
-Salesforce Design
-Salesforce Architecture
-SQL Programming
-Java Programming
-Python Programming
-Agile Methodologies
-Agile Team Environment
-System Integration
-Technical Expertise
-Stakeholder Communication
-Collaboration
-Troubleshooting
+Java
+Python
+Object-Oriented Programming (OOP)
+Design Patterns
 Debugging
+Unit Testing
+Development Principles
+IntelliJ
+Playwright
+Vitest
+VSCode
+Microservices
+APIs
+REST
+SOAP
+Relational Databases
+NoSQL Databases
+Source Control
+Git
+Code Reviews
+Pair Programming
+Code Reuse
+Design Reviews
+Documentation
 Testing
-Analysis
-Business Systems
-Computer Science (Bachelor's degree)
-CPQ/CLM Implementation
-Salesforce Reports
-Salesforce Dashboards
-Architecture Collaboration
-Technical Guidance
-Requirements Gathering
-Adaptability
-Service-Oriented
-Curiosity
+Problem-Solving
+Root Cause Analysis
+Coding Standards
+Time Management
+Communication Skills
+Interpersonal Skills
+Organizational Skills
+Prioritization
+Critical Thinking
+Independent Work
+Mentorship
+Team Collaboration
+Fast-Paced Environment
+Agile Methodologies (implied by practices)
+Usability
+Responsiveness
+Performance Optimization
  """)
 
 # Extract actual embedding as a Numpy array 
