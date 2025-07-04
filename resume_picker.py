@@ -12,6 +12,7 @@ text_embedder.warm_up()
     #skills for Resume 3.0
 result = text_embedder.run("""
 Machine Learning
+                           
 Deep Learning
 Computer Vision
 Python
