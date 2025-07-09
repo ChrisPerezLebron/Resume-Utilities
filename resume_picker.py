@@ -11,51 +11,49 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-Machine Learning
-                           
-Deep Learning
-Computer Vision
-Python
-C++
-YOLO
-AWS Machine Learning
+Java
+SQL
+Spark
+Hadoop
+GCP (Google Cloud Platform)
+AWS
 Azure
-Edge Processing
-MLOps
-Image Recognition
-Cloud Computing
-GPU Clusters
-IoT Platforms
-Graphical User Interfaces (GUI)
-MongoDB
-MySQL
-JSON
-Parse
-Firebase
-Data Extraction
-Data Manipulation
-Data Analysis
-Statistics
-Agile (Scrum, Kanban, SAFe)
-Spock Testing Framework
-JUnit
-Software Development Life Cycle
-Developer Tooling
-Version Control
-Deployment Pipelines
-Debugging
-Performance Optimization
-Cross-Functional Collaboration
-Business-Oriented Problem Solving
-Communication with Non-Technical Audiences
-Fast-Paced Environment Adaptability
-Open Source Libraries
-Solution Design
-Task Management Tools
-Usability Engineering
-Model Validation
-Startup-like Work Environment
-Trend Awareness in Tech
+BigTable
+BigQuery
+Dataproc
+Pub/Sub
+Kafka
+Hive
+Apache Beam
+Object-oriented programming
+Batch processing pipelines
+Distributed systems
+Docker
+Kubernetes
+Terraform
+Helm
+Gradle
+Jenkins
+REST API design
+Parquet
+Streaming data processing
+Graph data structures
+Path computation
+High-performance backend systems
+Scalable system design
+Cloud-based platforms
+Data ingestion systems
+Caching mechanisms
+DevOps
+Scrum
+CI/CD
+Operational excellence
+Code maintainability
+System reliability
+Startup culture
+Team collaboration
+Feedback culture
+Adaptability to new technologies
  """)
 
 # Extract actual embedding as a Numpy array 
