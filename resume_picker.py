@@ -11,44 +11,35 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-Java
+C#
+.NET
+ASP.NET RESTful API design
+REST API development
+SQL Server
+Postgres
+MySQL
+Modern Web UI frameworks (Angular, React)
 JavaScript
-Object-oriented programming
-Data structures
-Algorithms
-Object-oriented design
-Design patterns
-Performance optimization
-Scalability
-Code reusability
-Clean code practices
-Unit testing
-Code reviews
-UI frameworks
-Angular
-React
-Vue.js
-Web development
-Component-based development
-AI integration
-AI-powered tools
-Workflow automation
-Problem-solving using AI
-Analytical skills
-Software architecture
-Debugging
-Build tools
-Source control
-Unix tools
-System administration
-ServiceNow platform (if applicable)
-IDE usage
-Software design
-Test automation
-Full software development lifecycle
-Hybrid work experience
-0–2 years of software engineering experience
-Bachelor’s degree in Computer Science or related field (implied)
+CSS
+Microservices architecture
+Vertical Slice Architecture
+Test-Driven Development (TDD)
+Behavior-Driven Development (BDD)
+Docker
+Kubernetes
+Helm
+ArgoCD
+Terraform
+GitHub Actions
+Azure
+Kafka
+Event-driven architecture
+GraphQL
+NoSQL databases
+Problem-solving skills
+Collaboration and communication skills
+Continuous learning of new technologies
+Mentorship and peer collaboration
  """)
 
 # Extract actual embedding as a Numpy array 
