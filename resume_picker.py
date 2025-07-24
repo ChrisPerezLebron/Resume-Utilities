@@ -11,35 +11,44 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-Python
+Java
 JavaScript
-TypeScript
-HTML
-CSS
+Object-oriented programming
+Data structures
+Algorithms
 Object-oriented design
-Full-stack development
-Frontend development
-Backend development
-LLM APIs (e.g., OpenAI, Claude)
-AI-powered applications
-AI agents
-Agentic systems
-Software development lifecycle
+Design patterns
+Performance optimization
+Scalability
+Code reusability
+Clean code practices
+Unit testing
 Code reviews
+UI frameworks
+Angular
+React
+Vue.js
+Web development
+Component-based development
+AI integration
+AI-powered tools
+Workflow automation
+Problem-solving using AI
+Analytical skills
+Software architecture
 Debugging
-Software testing
-Version control
-Git
-Containerized environments
-Problem-solving
-Learning mindset
-Remote collaboration
-Clean, maintainable code
-Bachelor’s degree in Computer Science or related field
-Experience with AI/ML or LLMs
-Proactive and detail-oriented attitude
-Adaptability
-Curiosity and eagerness to grow
+Build tools
+Source control
+Unix tools
+System administration
+ServiceNow platform (if applicable)
+IDE usage
+Software design
+Test automation
+Full software development lifecycle
+Hybrid work experience
+0–2 years of software engineering experience
+Bachelor’s degree in Computer Science or related field (implied)
  """)
 
 # Extract actual embedding as a Numpy array 
