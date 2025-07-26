@@ -11,35 +11,27 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-C#
-.NET
-ASP.NET RESTful API design
-REST API development
-SQL Server
-Postgres
-MySQL
-Modern Web UI frameworks (Angular, React)
-JavaScript
-CSS
-Microservices architecture
-Vertical Slice Architecture
-Test-Driven Development (TDD)
-Behavior-Driven Development (BDD)
-Docker
-Kubernetes
-Helm
-ArgoCD
-Terraform
-GitHub Actions
-Azure
-Kafka
-Event-driven architecture
-GraphQL
-NoSQL databases
-Problem-solving skills
-Collaboration and communication skills
-Continuous learning of new technologies
-Mentorship and peer collaboration
+Excel
+Google Sheets
+Data analysis
+Performance reporting
+Dashboard creation
+Data visualization
+Creative insights identification
+Trend analysis
+Report building
+Collaboration with account teams
+Critical thinking
+Clear written communication
+Client communication skills
+Digital marketing analytics
+Familiarity with Meta Ads
+Familiarity with TikTok Ads
+Marketing background
+Media analytics
+Competitiveness
+Coachability
+Curiosity
  """)
 
 # Extract actual embedding as a Numpy array 
