@@ -11,27 +11,38 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-Excel
-Google Sheets
-Data analysis
-Performance reporting
-Dashboard creation
-Data visualization
-Creative insights identification
-Trend analysis
-Report building
-Collaboration with account teams
-Critical thinking
-Clear written communication
-Client communication skills
-Digital marketing analytics
-Familiarity with Meta Ads
-Familiarity with TikTok Ads
-Marketing background
-Media analytics
-Competitiveness
-Coachability
-Curiosity
+Core software development principles
+Software development methodologies
+JavaScript frameworks
+CSS
+ASP.NET
+C#
+SQL
+Coding standards
+Testing and debugging
+Software enhancements
+System implementation planning
+Programming documentation
+Version control
+Software Development Life Cycle (SDLC) best practices
+Application integration
+Database knowledge
+Systems knowledge
+Network fundamentals
+User interface and requirements gathering
+Vendor communication and support management
+Strong organizational skills
+Attention to detail
+Accountability
+Strong verbal communication
+Strong written communication
+Team collaboration
+Ability to work independently
+Multi-tasking
+PowerOn (plus)
+SymXchange (plus)
+Microsoft Office proficiency
+Bachelor’s degree in Computer Science or related field (or equivalent experience)
  """)
 
 # Extract actual embedding as a Numpy array 
