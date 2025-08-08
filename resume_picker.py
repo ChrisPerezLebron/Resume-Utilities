@@ -11,38 +11,44 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-Core software development principles
-Software development methodologies
-JavaScript frameworks
-CSS
-ASP.NET
-C#
-SQL
-Coding standards
-Testing and debugging
-Software enhancements
-System implementation planning
-Programming documentation
+Software engineering
+CMMI work procedures
+Rigorous coding standards
+System requirements analysis
+Software design
+Code development
+Unit testing
+Integration testing
+Software documentation
+High availability systems
+Mission-critical systems
+Protocols
+Linux
+Linux debugging
+Custom Linux kernel
+Embedded systems
+Real-time constraints
+Hardware debugging
+C/C++
+Dynamic memory allocation
+Python
+Python optimization
+Software architecture
+Customer requirements elicitation
+Server provisioning
+Deployment on RHEL
+Red Hat Enterprise Linux
+Radio frequency engineering
+Software defined radio
+RF communications
 Version control
-Software Development Life Cycle (SDLC) best practices
-Application integration
-Database knowledge
-Systems knowledge
-Network fundamentals
-User interface and requirements gathering
-Vendor communication and support management
-Strong organizational skills
-Attention to detail
-Accountability
-Strong verbal communication
-Strong written communication
-Team collaboration
-Ability to work independently
-Multi-tasking
-PowerOn (plus)
-SymXchange (plus)
-Microsoft Office proficiency
-Bachelor’s degree in Computer Science or related field (or equivalent experience)
+Collaboration
+Team communication
+Project leadership
+STEM degree
+Verbal communication skills
+Technical writing
+Agile development (implied in collaboration/teamwork)
  """)
 
 # Extract actual embedding as a Numpy array 
