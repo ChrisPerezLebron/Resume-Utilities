@@ -11,16 +11,37 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-Python programming
-PyTorch
-Kineto trace
-Dispatcher
-CUDA
-Triton kernels
-Database management
+C#
+ASP.NET
+JavaScript
+HTML
+CSS
+Razor
+MAUI
+Xamarin
+Swift
 SQL
-Linux
-Bash
+Test-driven development (TDD)
+Code reviews
+Debugging
+Documentation
+Visual Studio
+Entity Framework
+Entity Framework Core
+Relational database concepts
+Source control
+TFS
+GitHub
+Azure
+LAMP stack
+ESRI (GIS)
+Agile development process
+Mobile application development (iOS & Android)
+Website performance optimization
+Requirements gathering
+Technical issue resolution
+Project planning
+Research on emerging tools and technologies
  """)
 
 # Extract actual embedding as a Numpy array 
