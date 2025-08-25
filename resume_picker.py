@@ -11,25 +11,31 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-C
-C++
-C#
-Microsoft SQL Server
-Relational databases
-Redgate (3rd party development tool)
-DevExpress (3rd party development tool)
-Business requirements gathering
-Software application development
-Software Development Life Cycle (SDLC)
-Quality solution delivery
-Interpersonal skills
-Collaboration with IT and business teams
-Communication skills
-Presentation skills
-Problem solving
-Adaptability to new concepts and technology
-Food distribution industry knowledge (plus)
-Internal business applications (sales, purchasing, finance, HR, EDI)
+JavaScript
+JSON
+CSS
+Application Development
+Database Architecture
+Workflow Process Diagramming
+Software Design
+Source Code Implementation
+Testing and Debugging
+System Analysis
+System Maintenance and Upgrades
+Technical Documentation
+Project Management
+Data Analysis
+Problem-Solving
+Client Communication
+Collaboration and Teamwork
+Independent Work
+Agile or Formal Development Processes
+API Integration and Implementation
+Analytical Skills
+Learning New Frameworks
+Computer Systems and Networks Knowledge
+Verbal and Written Communication
+Customer Service Mindset
  """)
 
 # Extract actual embedding as a Numpy array 
