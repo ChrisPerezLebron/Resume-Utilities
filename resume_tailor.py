@@ -169,15 +169,53 @@ best_work_experience = np.argsort(work_experience_similarity, axis=0)
 
 # Formating for output 
 print("")
-print("================================================Work Experience START================================================")
+print("================================================Work Experience 1 START================================================")
 best_work_experience = best_work_experience[-20:]
 # print best resumes w/ cosine similarity score
 for i in range(len(best_work_experience)-1, -1, -1):
     print(work_experience_similarity[best_work_experience[i]], work_experience[best_work_experience[i]])
     print()
 # Formatting for output
-print("================================================Work Experience END================================================")
+print("================================================Work Experience 1 END================================================")
 print("")
+
+if PROMMUNI:
+    # List of work experience bullet points
+    work_experience = [
+        "built a recommendation engine",
+        "built front end components in react", 
+        "supported backend data pipeline in postgressSQL",
+        "orchastrated development using nextJS"
+    ]
+
+    # Embedd all bullet points as unit length word embeddings into a single matrix
+    work_experience_matrix_unit = np.zeros(shape=(len(work_experience), len(skills_embedding)))
+    for i, bullet in enumerate(work_experience):
+        # Get embedding for this bullet  
+        bullet_embeddding = np.array(text_embedder.run(bullet)['embedding'])
+
+        # Normalize the embedding for cosine similarity later
+        work_experience_matrix_unit[i] = bullet_embeddding/np.linalg.norm(bullet_embeddding)
+
+
+    # Perform cosine similarity
+    work_experience_similarity = np.dot(work_experience_matrix_unit, skills_embedding_unit)
+
+    # Argsort the bullet points 
+    best_work_experience = np.argsort(work_experience_similarity, axis=0)
+
+    # Formating for output 
+    print("")
+    print("================================================Work Experience 2 START================================================")
+    best_work_experience = best_work_experience[-20:]
+    # print best resumes w/ cosine similarity score
+    for i in range(len(best_work_experience)-1, -1, -1):
+        print(work_experience_similarity[best_work_experience[i]], work_experience[best_work_experience[i]])
+        print()
+    # Formatting for output
+    print("================================================Work Experience 2 END================================================")
+    print("")
+
 
 if PROJECTS: 
     # For projects we use a list of tuple (projectTitle, [bullet points])
