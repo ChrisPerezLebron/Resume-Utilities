@@ -20,30 +20,50 @@ text_embedder.warm_up()
 
 # Embedd the list of skills
 skills_result = text_embedder.run("""
-React
+Software development
+Agile development
+Object-oriented programming
+Java
+C++
+C#
 Python
-Full-stack development
-AI-powered development
-Production code
-Software architecture
-High-pressure environment adaptability
-Results-driven mindset
-Rapid learning ability
-Strong work ethic
-Creative problem-solving
-Excellent communication
-Technical mindset
-Shipping products (not just coding)
-Exploring novel technologies
-Interest in future of software engineering
-Building for production environments
-Using latest AI development tools
-Delivering results over documentation
-Continuous learning (#1 priority)
-Startup/growth-stage mentality
-Emerging technology industries focus
-Regulatory/security platform development
-Novel technology exploration
+JavaScript
+TypeScript
+HTML
+CSS
+Front-end development
+Angular
+Web-based programming
+Test-driven development (TDD)
+Unit testing
+Test automation
+Database interaction
+MongoDB
+Oracle DB
+SQL Server
+PostgreSQL
+SQLite
+Algorithms
+Data structures
+Dependency package managers
+NPM
+Gradle
+Conan
+Version control
+Git
+GitHub
+GitHub Advanced Security
+CodeQL
+Static code analysis
+User interface design
+User interaction feedback
+Code reviews
+Design reviews
+Collaboration with architects and stakeholders
+Troubleshooting software malfunctions
+Time management
+Self-motivation
+Mentorship and training of team members
             """)
 
 # Extract actual embedding as a Numpy array 
@@ -75,7 +95,7 @@ courses = [
     "CMSC246 - Intro to SQL Using Oracle",
     "MATH240 - Linear Algebra (Matlab)",
     "CMSC330 - Organization of Programming Languages (Python, OCamel, Rust)",
-    "ENGL393 - Technical Writting",
+    "ENGL393 - Technical Writing",
 ]
 # Embedd all courses as unit length word embeddings into a single matrix
 courses_matrix_unit = np.zeros(shape=(len(courses), len(skills_embedding)))
@@ -112,7 +132,7 @@ if PROMMUNI:
         "built front end components in react", 
         "supported backend data pipeline in postgressSQL",
         "orchastrated development using nextJS",
-        "Served as the primary advisor on AI/ML capabilities at an early-stage startup, guiding technical strategy on recommendation systems and intelligent workflows.",
+        "Served as the primary advisor on AI/ML capabilities at an early-stage startup, guiding technical strategy on recommendation systems and AI/ML pipelines.",
         "Designed and implemented a k-Nearest Neighbors (kNN) roommate recommendation engine, using Python (NumPy, Pandas, scikit-learn) and text embeddings to match users based on categorical data and free-text profiles.",
         "Refactored recommendation engine into an object-oriented architecture, implementing update and fetch functions, caching strategies, and performance benchmarking (100–10,000+ users).",
         "Conducted empirical testing of recommendation performance, optimizing cosine similarity computations, KDTree indexing, and filter logic to balance accuracy and efficiency.",
@@ -123,10 +143,9 @@ if PROMMUNI:
         "Investigated Supabase (Postgres) integration with AI/ML services, analyzing schema consistency, edge function triggers, and query-time filtering for recommendation delivery.",
         "Collaborated in a fast-paced startup environment with weekly whiteboarding sessions, Jira-based task management, and cross-functional syncs with founders and engineers.",
         "Set up and automated workflows with n8n (low-code platform) for a smart leasing assistant, integrating APIs, Docker deployment, and webhook triggers.",
-        "Developed front-end components using Next.js, React, and TypeScript, completing Next.js foundational and App Router courses to contribute to production codebase.",
+        "Developed front-end components for the production web application using Next.js, React, and TypeScript.",
         "Implemented state management, hooks, and reusable components in React to enhance interactivity and scalability of the housing platform.",
-        "Contributed to front-end UI/UX development with Radix UI primitives, accessibility-focused popover components, and ESLint/Prettier for code quality.",
-        "Coordinated with team leads to translate product requirements into AI/ML and full-stack engineering tasks, including user onboarding, roommate preferences, and tenant scoring features.",
+        "Coordinated with team leads to translate product requirements into AI/ML and full-stack engineering tasks, including features for user onboarding, roommate matching, and tenant scoring.",
         "Documented and tracked development progress via GitHub issues, Jira tickets, and Slack, ensuring transparent communication and alignment across the team.",
         "Benchmarked multiple recommendation algorithms (constraint satisfaction, gradient boosting, kNN, cosine similarity, LLM-based) to determine tradeoffs in speed, scalability, and user experience.",
         "Tested model scalability by running recommendation algorithms on datasets ranging from 100 to 10,000+ users to measure performance under realistic growth scenarios.",
@@ -138,12 +157,9 @@ if PROMMUNI:
         "Developed modular code for embeddings and similarity functions to improve maintainability and enable rapid experimentation with new models.",
         "Analyzed and documented system tradeoffs (e.g., SQL vs vector databases, kNN vs boosting, LLM integration vs traditional ML) to support executive decision-making.",
         "Enhanced collaboration efficiency by documenting workflows, test results, and technical tradeoffs for non-technical stakeholders.",
-        # "Contributed to containerized deployment setups (Docker) for AI/ML workflows and low-code automation tools (n8n).",
-        # "Created reusable prompts and structured pipelines for LLM evaluation, testing prompt engineering techniques to improve reliability of AI-generated outputs."
-        # "Implemented front-end accessibility improvements using Radix UI and best practices in semantic React components.",
         "Proposed monetization strategies for the housing platform, including lead-generation to landlords and a “pod compatibility” score to sell higher-quality pods.", 
         "Prototyped an LLM integration: attempted to connect a local Ollama instance with DeepSeek R1 to prototype a user profile summarization pipeline and identified API / cost blockers.", 
-        "Ran the development instance locally to inventory front-end data capture (DOB, gender, ethnicity, relocating city, occupation, sexuality, religion, interests, roommate preferences, budget, move-in range, etc.) to inform ML feature design.",
+        "Ran the local development instance to audit front-end data capture and translate user attributes into features for machine learning models.",
         "Discovered and documented front-end UI bugs (e.g., username validity not rechecked without refresh; negative minimum budget allowed; max budget < min budget allowed; inability to edit lease length in roommate preferences).",
         "Investigated Supabase database access (used DATABASE_URL / Beekeeper Studio to inspect tables) and flagged inconsistent / messy values in the DB schema.",
         "Implemented preprocessing code to convert dates into “days since” a reference date, processed the combined_text column (converted each row’s combined text into a text embedding and appended it to the row), and changed the pipeline to return a NumPy matrix for nearest-neighbor search using cosine similarity metric.",
@@ -154,6 +170,11 @@ if PROMMUNI:
         "Evaluated caching / precomputation deployment options for recommendations (Supabase Edge Functions vs a periodic Flask job + API) to reduce recomputation overhead.",
         "Reviewed a previous team branch (manual user-pair score vs learned model), assessed its assumptions, and recommended using cosine-similarity as a pragmatic approach until a labeled data pipeline exists.",
         "Measured and quantified the contribution of the word-embedding portion of user vectors to total similarity, informing feature-engineering decisions.",
+        # "Contributed to containerized deployment setups (Docker) for AI/ML workflows and low-code automation tools (n8n).",
+        # "Created reusable prompts and structured pipelines for LLM evaluation, testing prompt engineering techniques to improve reliability of AI-generated outputs."
+        # "Contributed to front-end UI/UX development with Radix UI primitives, accessibility-focused popover components, and ESLint/Prettier for code quality.",
+        # "Implemented front-end accessibility improvements using Radix UI and best practices in semantic React components.",
+       
     ]
 
     # Embedd all bullet points as unit length word embeddings into a single matrix
@@ -192,15 +213,15 @@ work_experience = [
     "Leveraged sharepoint.",
     "Integrated OpenAI’s API into a retrieval-augmented generation pipeline for question answering, using Jinja templates to engineer few-shot prompts that combined explicit task instructions with example outputs and the most relevant knowledge graph subsets retrieved via vector embedding similarity, resulting in an 80% improvement in response accuracy.",
     "Built a retrieval-augmented generation (RAG) pipeline that empowered HR professionals to ask high-level, natural language questions against a structured knowledge graph, leveraging OpenAI’s API and Jinja-based prompt engineering to deliver highly accurate responses, improving overall decision-making efficiency.",
-    "Leveraged ChatGPT and DeepSeek to help break down development hurdles speeding up implementation and decreasing my use of administrative resources.",
+    "Utilized ChatGPT and DeepSeek to resolve complex development challenges, reducing implementation time and improving operational efficiency.",
     "Utilized Secure File Transfer Protocol (SFTP) to send files to the AWS instance hosting our web application.",
     "Implemented 50+ REST API endpoints for handling JSON payloads and HTTP requests, reducing CRUD operation time by 30% through dynamic AJAX components and modular design patterns.",
-    "Drove full-stack development of a robust HR analytics platform across the full Software Development Life Cycle (SDLC), from requirements gathering and architecture design to testing and deployment, delivering production-ready features in Agile sprints and enhancing HR insights accessibility by 40%.",
+    "Drove full-stack development of an internal HR analytics platform across the full Software Development Life Cycle (SDLC), from requirements gathering and architecture design to testing and deployment, delivering production-ready features in Agile sprints and enhancing HR insights accessibility by 40%.",
     "Built a consumer-facing HR analytics dashboard using JavaScript and Chart.js, translating Neo4j knowledge graph CRUD operations into real-time time-series visualizations. Reduced HR decision latency by 40% and improved anomaly detection by 65% through continuous change monitoring.",
     "Led product research and requirements analysis by evaluating Obsidian’s features and workflows, translating insights into system design and Neo4j schema architecture. This approach enabled the full-stack team to reduce development time by 25% and deliver an internal talent-tracking web app more efficiently.",
     "Engineered retrieval-augmented generation (RAG) pipelines for our HR knowledge graph application, implementing bidirectional relationship extraction and token optimization strategies that improved context relevance by 50% while troubleshooting GPU acceleration to reduce model inference latency by 30%.",
     "Programmed Arduino microcontrollers in C/C++ to design and debug digital circuits (button-controlled LED matrices, sensor-triggered fans), implementing GPIO manipulation and interrupt handling to advance foundational hardware and embedded systems knowledge.",
-    "Led Docker containerization and deployment of a consumer-facing HR analytics platform to AWS, collaborating cross-functionally with engineers, cybersecurity specialists, and C-suite stakeholders to improve application availability and enable scalable production rollout.", #= to next 
+    "Led Docker containerization and deployment of an internal HR analytics platform to AWS, collaborating with engineers, cybersecurity specialists, and C-suite stakeholders to improve availability and enable scalable production rollout.",
     "Deployed a containerized application to AWS using Docker on a Linux instance, resolving port conflicts over TCP/IP and accelerating future deployments by 40%. Simulated the production environment locally with VMware and VirtualBox, and managed AWS servers via CLI tools.", #= to prior
     "Delivered maintainable Neo4j CRUD operations to manage 100+ employee records, enhancing backend data handling and platform scalability.", 
     "Developed knowledge graph embeddings using Neo4j's vector indexing capabilities, leveraging cosine similarity search that improved node relationship discovery accuracy by 55% for our AI-powered HR analytics web application.",
@@ -211,24 +232,25 @@ work_experience = [
     "Developed Python/Flask RESTful API endpoints with OpenAI integration for resume parsing, using prompt engineering and Jinja templates to extract structured data including skills, education, and certifications from resumes, increasing extraction accuracy by 40% and significantly reducing manual input time.",
     "Engineered a full-stack knowledge graph application with a Python/Flask backend and JavaScript/Bootstrap frontend, implementing dynamic AJAX/jQuery UI components and real-time form validation that cut CRUD operation time by 30%.", #= to next
     "Engineered a full-stack knowledge graph application using Python/Flask backend and JavaScript/Bootstrap frontend, collaborating with 3 software engineers to implement 15+ REST API endpoints for CRUD operations on Neo4j graph databases, reducing data retrieval latency by 40% through optimized Cypher queries.", #= to prior
-    "Collaborated closely with a team of three Software Engineers to build a full-stack web application using Python and Flask for the backend, and HTML, CSS, JavaScript, and Bootstrap for the frontend, while fostering effective communication that accelerated development and enabled delivery two weeks ahead of schedule.",
+    "Collaborated closely with a team of three Software Engineers to build a full-stack web application using Python and Flask for the backend, and HTML, CSS, JavaScript, and Bootstrap for the front end, while fostering effective communication that accelerated development and enabled delivery two weeks ahead of schedule.",
     "Developed a flexible data ingestion pipeline in Python using Flask for API integration and Pandas for data processing, enabling quick graph node creation from search bar input or CSV upload via a custom adjacency list syntax, cutting data loading complexity by 70%",
     "Revamped user interfaces with Bootstrap/CSS, implementing modal-based editing and autocomplete search that decreased user errors by 45% in node-relationship management workflows.", 
     "Integrated OpenAI API for question answering, retrieval-augmented generation, leveraged Jinja to perform prompt engineering, which improved response accuracy by 80% while implementing usage caps to control API costs.",
     "Created comprehensive repository wiki documentation for graph schemas and RESTful API endpoints, improving onboarding efficiency by 50% for new developers while standardizing data ingestion protocols.",
     "Developed an elegant graph view using HTML5, CSS, JavaScript, Bootstrap, and Alchemy.js while using AJAX and RESTful API calls for dynamic updates, enabling real-time graph updates that accelerated HR data visualization by 90%.",
     "Implemented schema validation with Python, Flask, and Neo4j, creating node-type checking algorithms that reduced data inconsistencies by 80% in knowledge graph updates.",
-    "Refactored 5,000+ lines of Python, HTML, and JavaScript code in an Agile environment using Git, resolving 15+ critical bugs while improving maintainability and reliability by 90%.",
-    "Researched Hugging Face models and vector embeddings to utilize in retrieval augmented generation against the data in our knowledge graph application, prototyping local Large Language Model solutions that demonstrated 50% faster query resolution for candidate search scenarios.",
+    "Refactored 5,000+ lines of Python, HTML, and JavaScript code in an Agile team setting using Git, resolving 15+ critical bugs and improving maintainability and reliability by 90%.", 
+    "Prototyped local LLM solutions using Hugging Face models and vector embeddings, enabling retrieval-augmented generation in a knowledge graph application and achieving 50% faster candidate search queries.",
+    "Evaluated Hugging Face models and vector embeddings to integrate retrieval-augmented generation into a knowledge graph platform, delivering prototypes that accelerated candidate search query resolution by 50%.",
     "Designed responsive user interfaces with Bootstrap/Jinja templates, implementing dynamic layouts by leveraging AJAX and jQuery to modify page layouts without necessitating page refresh, resulting in a more satisfying user experience.",
     "Developed interactive relationship visualizations with Alchemy.js that enabled users to intuitively input and link personnel data, reducing user errors by 25%.",
     "Visualized Human Resource information highlighting skills, certifications, and clearances held by the internal workforce using HTML5, CSS, JavaScript, and Alchemy.js, producing relationship visualization components that decreased user errors by 25% in graph node and relationship creation workflows.",
     "Developed knowledge graph-based search and Natural Language Processing features including autocomplete functionality using Cypher query language, enabling complex relationship mapping across 200+ nodes which improved HR data query efficiency by 60%",
-    "Integrated Python/Flask RESTful API endpoints with a JavaScript frontend using AJAX and jQuery, developing dynamic node/relationship management interfaces that reduced CRUD operation time by 30% through real-time form validation and modal-based editing.",
+    "Integrated Python/Flask RESTful API endpoints with a JavaScript front end using AJAX and jQuery, developing dynamic node/relationship management interfaces that reduced CRUD operation time by 30% through real-time form validation and modal-based editing.",
     "Containerized an HR analytics platform using Docker to enable scalable deployment on AWS, streamlining the CI/CD pipeline and reducing deployment errors by 30%.",
     "Documented 20+ RESTful API endpoints and internal code functionality, accelerating onboarding speed by 50% for new software engineering hires.",
     "Created data ingestion systems using Pandas to process CSV data into Neo4j knowledge graphs, streamlining the ingestion of over 200+ nodes and 100+ relationships.",
-    "Led frontend bug resolution and feature enhancements in Agile environment using GitHub, refactoring 5K+ lines of front end JavaScript, HTML5, and CSS code into modular components that improved maintainability by 50%.", 
+    "Led front-end bug resolution and feature enhancements in an Agile environment using Git and GitHub, refactoring 5K+ lines of front end JavaScript, HTML5, and CSS code into modular components that improved maintainability by 50%.", 
 ]
 
 # Embedd all bullet points as unit length word embeddings into a single matrix
