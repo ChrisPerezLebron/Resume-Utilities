@@ -128,6 +128,7 @@ print("")
 if PROMMUNI:
     # List of work experience bullet points
     work_experience = [
+        # UPDATED AS OF 9/14/25
         "built a recommendation engine",
         "built front end components in react", 
         "supported backend data pipeline in postgressSQL",
