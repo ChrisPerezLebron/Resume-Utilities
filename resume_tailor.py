@@ -20,50 +20,37 @@ text_embedder.warm_up()
 
 # Embedd the list of skills
 skills_result = text_embedder.run("""
-Software development
-Agile development
-Object-oriented programming
-Java
-C++
-C#
 Python
 JavaScript
 TypeScript
+React
+Web development
 HTML
 CSS
-Front-end development
-Angular
-Web-based programming
-Test-driven development (TDD)
-Unit testing
-Test automation
-Database interaction
-MongoDB
-Oracle DB
-SQL Server
-PostgreSQL
-SQLite
-Algorithms
-Data structures
-Dependency package managers
-NPM
-Gradle
-Conan
-Version control
+Frontend development
+Backend development
+Full-stack development
+Object-oriented design
+Programming principles
+AI technologies
+Large Language Models (LLMs)
+LLM APIs (OpenAI, Claude, etc.)
+Agentic systems
 Git
-GitHub
-GitHub Advanced Security
-CodeQL
-Static code analysis
-User interface design
-User interaction feedback
+Version control
+Software development lifecycle (SDLC)
 Code reviews
-Design reviews
-Collaboration with architects and stakeholders
-Troubleshooting software malfunctions
-Time management
-Self-motivation
-Mentorship and training of team members
+Debugging
+Testing
+Deployment
+Containerized environments
+Problem-solving
+Research and experimentation
+Remote collaboration
+Clean, maintainable code
+Proactive learning
+Adaptability
+Detail orientation
             """)
 
 # Extract actual embedding as a Numpy array 
@@ -144,7 +131,7 @@ if PROMMUNI:
         "Investigated Supabase (Postgres) integration with AI/ML services, analyzing schema consistency, edge function triggers, and query-time filtering for recommendation delivery.",
         "Collaborated in a fast-paced startup environment with weekly whiteboarding sessions, Jira-based task management, and cross-functional syncs with founders and engineers.",
         "Set up and automated workflows with n8n (low-code platform) for a smart leasing assistant, integrating APIs, Docker deployment, and webhook triggers.",
-        "Developed front-end components for the production web application using Next.js, React, and TypeScript.",
+        "Developed front-end components for the production web application using  React, Next.js, and TypeScript.",
         "Implemented state management, hooks, and reusable components in React to enhance interactivity and scalability of the housing platform.",
         "Coordinated with team leads to translate product requirements into AI/ML and full-stack engineering tasks, including features for user onboarding, roommate matching, and tenant scoring.",
         "Documented and tracked development progress via GitHub issues, Jira tickets, and Slack, ensuring transparent communication and alignment across the team.",
