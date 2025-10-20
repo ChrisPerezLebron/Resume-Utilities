@@ -11,63 +11,28 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-Java
-JavaScript
-TypeScript
-HTML
-XML
-React
-Angular
-Vue
-RESTful APIs
-Web Services
-AWS
-EC2
-S3
-Lambda
-CloudFormation
-AI/ML Workflows
-Full-Stack Development
-MySQL
-Postgres
-JSON
-Linux
-Keycloak
-SAML
+C#
+.NET
+Python
+Software development
+Microservices design and development
+Cloud-based environments
 Docker
 Kubernetes
-Rancher
-Containerization
-Infrastructure as Code
-DevOps
-GitLab
-GitHub
-JIRA
-Agile
-Scrum
-Code Reviews
-Testing
-Troubleshooting
-Optimization
-Cloud-Native Databases
-DynamoDB
-RDS
-Bash Scripting
-Kafka
-Messaging Services
-Vulnerability Mitigation
-Security Best Practices
-DevSecOps
-Analytical Workflows
-Cross-Functional Teamwork
-Collaboration
-Problem Solving
-Creativity
-Adaptability
-US Government / Federal Contract Experience
-AWS Certification
-IT Certifications
-Public Trust Clearance Eligible
+Github Actions
+CI/CD pipelines
+Automated unit and integration testing
+Debugging and troubleshooting
+Problem-solving
+Agile development methodologies
+Industrial automation software development
+Azure cloud technologies
+Data streaming (Kafka Streams)
+Databricks
+Collaboration and communication skills
+Code review participation
+Attention to detail
+High-quality software delivery
  """)
 
 # Extract actual embedding as a Numpy array 
