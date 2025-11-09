@@ -11,28 +11,21 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-C#
-.NET
-Python
-Software development
-Microservices design and development
-Cloud-based environments
-Docker
-Kubernetes
-Github Actions
-CI/CD pipelines
-Automated unit and integration testing
-Debugging and troubleshooting
-Problem-solving
-Agile development methodologies
-Industrial automation software development
-Azure cloud technologies
-Data streaming (Kafka Streams)
-Databricks
-Collaboration and communication skills
-Code review participation
-Attention to detail
-High-quality software delivery
+Rust
+Systems programming
+Low-level programming
+Concurrent programming
+Performance optimization
+Memory management
+Safe systems design
+Asynchronous programming (async/await)
+Linux development
+Command-line tooling
+API development
+Software architecture
+Testing and debugging
+Version control (Git)
+Collaboration with distributed teams
  """)
 
 # Extract actual embedding as a Numpy array 
