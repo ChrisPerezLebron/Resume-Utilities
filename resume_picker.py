@@ -11,21 +11,28 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-Rust
-Systems programming
-Low-level programming
-Concurrent programming
-Performance optimization
-Memory management
-Safe systems design
-Asynchronous programming (async/await)
-Linux development
-Command-line tooling
-API development
-Software architecture
-Testing and debugging
+Java
+Kotlin
+JavaScript
+HTML
+CSS
+Front-end development
+Server-side development
+Web application development
+Scalable solution design
+Unit testing
+Automated integration testing
+Debugging
+Troubleshooting production issues
 Version control (Git)
-Collaboration with distributed teams
+Agile development
+Code reviews
+Object-oriented programming (OOP)
+Data structures
+Algorithms
+Problem-solving
+Collaboration with cross-functional teams
+Continuous learning
  """)
 
 # Extract actual embedding as a Numpy array 
