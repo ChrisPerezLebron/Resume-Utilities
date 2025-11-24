@@ -479,6 +479,9 @@ if PROJECTS:
             "Regex"
         ]),
         ("Reddit Real-time Sentiment Analyzer | Python, Flask, React, Docker, Machine Learning", [
+            "Developed backend code for a web app that calculated general sentiment analysis towards a topic with an efficiency of 85% by analyzing texts on social media using pre-trained natural language processing models like VADER, Flair, and twitter-roBERTa.",
+            "Elevated the presentation quality of the final product and improved user experience by designing an intuitive web-based interface using React and Flask that allowed real-time interaction with analysis results.",
+            "Improved user satisfaction rate by 90% by implementing a new feature on the web app that summarized the Reddit discussions using OpenAI API, saving users an average of 5 minutes per session in understanding the context of the sentiment analysis.",
             "python was used as the backend language, combined with flask it served as our backend service and the host for our sentiment analysis",
             "leveraged the reddit API to get current conversations about a user specified topic for sentiment analysis", 
             "utilized docker to streamline deployment to AWS",
