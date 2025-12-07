@@ -11,23 +11,31 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-Software development
-Debugging
-Software modification
-Unit testing
-Problem-solving
-Analytical skills
-Relational databases (SQL Server, Oracle)
+React
+NextJS
+React Native
+TypeScript
+Front-end development
 Web application development
-Accounting systems familiarity
-Collaboration and teamwork
-Time management
-Organization skills
-Oral and written communication
-Attention to detail
-Software integrity and interoperability
-Prioritization of tasks
-Fast-paced environment adaptability
+Responsive design / Mobile optimization
+Integration testing / QA
+Debugging and troubleshooting
+Cross-functional collaboration
+HTML
+CSS
+AWS services
+Version control (Git)
+RESTful APIs
+Third-party API integration
+SQL
+Python
+Django
+Problem-solving
+Technical documentation
+E-commerce / DTC experience
+Startup environment experience
+Security best practices
+Performance optimization
  """)
 
 # Extract actual embedding as a Numpy array 
