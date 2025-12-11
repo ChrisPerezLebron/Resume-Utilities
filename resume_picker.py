@@ -11,34 +11,23 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-JavaScript
-TypeScript
-React
-Vue
-HTML
-CSS
-Accessibility (a11y)
-Frontend performance optimization
+Salesforce (training provided)
+Object-oriented programming
 Full-stack development
-Backend frameworks (Express, FastAPI, Spring, Fiber)
-API efficiency and design
-Data modeling
-SQL
-NoSQL
-Testing frameworks (Jest, React Testing Library, Cypress, PyTest)
-Code reviews
-Iterative development
-State management (Redux, MobX, Recoil)
-CI/CD pipelines
-Modern build tooling
-Analytics and experimentation
-Cloud infrastructure (AWS, GCP, Azure)
-Containers
-Observability
-Product engineering and UX instincts
-Problem-solving
+Pair programming
+Application design and development
+Application enhancements
+Solution design and technical specifications
+System Development Life Cycle (SDLC)
+Unit testing
+Performance testing
+Regression testing
+User acceptance testing (UAT)
+Defect remediation
+Troubleshooting and debugging
 Collaboration and teamwork
-End-to-end ownership of features
+Technical documentation
+Willingness to learn new technology stacks (MuleSoft, .NET, Azure)
  """)
 
 # Extract actual embedding as a Numpy array 
