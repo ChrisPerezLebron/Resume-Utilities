@@ -11,23 +11,39 @@ text_embedder.warm_up()
 # Embed the list of skills
     #skills for Resume 3.0
 result = text_embedder.run("""
-Salesforce (training provided)
-Object-oriented programming
+Java
+Python
+Angular
+JavaScript
+Web development frameworks
+RESTful web services
+Relational databases
+NoSQL databases
+SQL
+MongoDB
+Git
+GitHub
 Full-stack development
-Pair programming
-Application design and development
-Application enhancements
-Solution design and technical specifications
-System Development Life Cycle (SDLC)
 Unit testing
-Performance testing
-Regression testing
-User acceptance testing (UAT)
-Defect remediation
-Troubleshooting and debugging
-Collaboration and teamwork
+Test automation
+Agile methodology
+Scrum
+Sprint planning
+Retrospectives
+Software design
+Fault-tolerant code
+Performance optimization
+Problem-solving
+Time management
+UI design
+User interaction design
 Technical documentation
-Willingness to learn new technology stacks (MuleSoft, .NET, Azure)
+Algorithms
+Data structures
+Mentoring
+Collaboration
+Monarch software
+Software build and deployment automation
  """)
 
 # Extract actual embedding as a Numpy array 
