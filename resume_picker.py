@@ -13,37 +13,35 @@ text_embedder.warm_up()
 result = text_embedder.run("""
 Java
 Python
+Object-oriented programming
+REST APIs
+Spring Boot
 Angular
 JavaScript
-Web development frameworks
-RESTful web services
-Relational databases
-NoSQL databases
-SQL
-MongoDB
-Git
-GitHub
-Full-stack development
-Unit testing
-Test automation
-Agile methodology
-Scrum
-Sprint planning
-Retrospectives
-Software design
-Fault-tolerant code
+SQL databases
+Backend service development
+API development
+Frontend component development
+Scalable UI development
 Performance optimization
-Problem-solving
-Time management
-UI design
-User interaction design
+Agile methodologies
+Peer code reviews
+Debugging
+Software testing
+CI/CD
+CI/CD pipeline maintenance
 Technical documentation
-Algorithms
-Data structures
-Mentoring
 Collaboration
-Monarch software
-Software build and deployment automation
+Problem solving
+Communication skills
+AI/ML concepts
+TensorFlow
+scikit-learn
+AWS
+Cloud platforms
+Git
+Docker
+Internship experience
  """)
 
 # Extract actual embedding as a Numpy array 
