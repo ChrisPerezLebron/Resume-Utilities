@@ -21,37 +21,55 @@ text_embedder.warm_up()
 
 # Embedd the list of skills
 skills_result = text_embedder.run("""
-Python
-JavaScript
-TypeScript
-React
-Web development
-HTML
-CSS
-Frontend development
-Backend development
-Full-stack development
-Object-oriented design
-Programming principles
-AI technologies
-Large Language Models (LLMs)
-LLM APIs (OpenAI, Claude, etc.)
-Agentic systems
-Git
-Version control
-Software development lifecycle (SDLC)
-Code reviews
-Debugging
-Testing
-Deployment
-Containerized environments
-Problem-solving
-Research and experimentation
-Remote collaboration
-Clean, maintainable code
-Proactive learning
-Adaptability
-Detail orientation
+Christopher Perez Lebron
+240-802-9459 | ChrisPerezLebron@gmail.com | linkedin.com/in/ChrisPerezLebron | github.com/ChrisPerezLebron
+Education
+University of Maryland Bachelor of Science in Computer Science, Machine Learning Track, GPA: 3.90 Relevant Coursework Compilers, Data Structures, Parallel Programming, Object Oriented Programming
+College Park, MD
+Aug. 2023 – May 2025
+Montgomery College Rockville, MD
+Associates of Arts in Computer Science, GPA: 3.93 Aug. 2020 – May 2023
+Experience
+Software Engineer Intern Jan. 2025 – Jan. 2025
+Acclaim Technical Services Hanover, MD
+• Orchestrated Docker containerization of consumer-facing HR analytics platform through cross-functional
+collaboration (SWEs, cybersecurity, C-suite), implementing code review protocols that enhanced system stability
+40% while delivering maintainable Neo4j CRUD operations on 100+ employee accounts.
+• Programmed Arduino microcontrollers in C/C++ to design and debug digital circuits (button-controlled LED
+matrices, sensor-triggered fans), implementing GPIO manipulation and interrupt handling to advance foundational
+hardware and embedded systems knowledge.
+Software Engineer Intern May 2024 – Aug. 2024
+Acclaim Technical Services Hanover, MD
+• Created comprehensive repository wiki documentation for graph schemas and RESTful API endpoints, improving
+onboarding e!ciency by 50% for new developers while standardizing data ingestion protocols.
+• Refactored 5,000+ lines of Python/JavaScript code in an Agile environment using Git, resolving 15+ critical bugs
+while improving maintainability by 90%.
+Software Engineer Intern Jan. 2024 – Jan. 2024
+Acclaim Technical Services Hanover, MD
+• Automated JSON data ingestion processing 100+ daily HTTP requests, implementing schema validation that
+reduced parsing errors by 65% while integrating with our RESTful API built using Python/Flask for real-time
+graph database updates.
+Software Engineer Intern May 2023 – Aug. 2023
+Acclaim Technical Services Hanover, MD
+• Developed an elegant graph view using HTML, CSS, JavaScript, Bootstrap, and Alchemy.js while using AJAX and
+RESTful API calls for dynamic updates, enabling real-time graph updates that accelerated HR data visualization
+by 90%.
+• Engineered a full-stack web application using a Python/Flask backend and a JavaScript/Bootstrap frontend,
+collaborating with three Software Engineers to implement 50+ REST API endpoints handling JSON payloads and
+HTTP requests, reducing CRUD operation time by 30% through dynamic AJAX components and modular design
+patterns.
+Projects
+Graphical Town Explorer | Java, JUnit 5, JavaFX
+• Implemented Test-Driven Development (TDD) and quality assurance protocols using JUnit 5 Jupiter for a
+Java-based graph routing application, designing 36 test cases covering Dijkstra’s algorithm, edge validation, and
+exception handling that achieved 100% critical path coverage and reduced graph operation defects by 75%.
+• Architected maintainable Java object-oriented programming (OOP) solution for graphical town mapping software
+by implementing a custom graph data structure (Town/Road/Graph classes) with encapsulation and inheritance,
+solving complex pathfinding challenges through Dijkstra’s algorithm that processed 100+ node networks, 40%
+faster runtime than the adjacency matrix approach.
+• Engineered modular and maintainable Java solution for town routing system featuring error handling (25+ edge
+cases), SOLID-compliant class hierarchy, and robust graph CRUD operations, that scaled to 100+ nodes while
+maintaining 100% specification compliance.
             """)
 
 # Extract actual embedding as a Numpy array 
@@ -148,7 +166,7 @@ if PROMMUNI:
         "Enhanced collaboration efficiency by documenting workflows, test results, and technical tradeoffs for non-technical stakeholders.",
         "Proposed monetization strategies for the housing platform, including lead-generation to landlords and a “pod compatibility” score to sell higher-quality pods.", 
         "Prototyped an LLM integration: attempted to connect a local Ollama instance with DeepSeek R1 to prototype a user profile summarization pipeline and identified API / cost blockers.", 
-        "Ran the local development instance to audit front-end data capture and translate user attributes into features for machine learning models.",
+        "Audited front-end data capture in a local development environment and transformed user attributes into features for machine learning models.",
         "Discovered and documented front-end UI bugs (e.g., username validity not rechecked without refresh; negative minimum budget allowed; max budget < min budget allowed; inability to edit lease length in roommate preferences).",
         "Investigated Supabase database access (used DATABASE_URL / Beekeeper Studio to inspect tables) and flagged inconsistent / messy values in the DB schema.",
         "Implemented preprocessing code to convert dates into “days since” a reference date, processed the combined_text column (converted each row’s combined text into a text embedding and appended it to the row), and changed the pipeline to return a NumPy matrix for nearest-neighbor search using cosine similarity metric.",
