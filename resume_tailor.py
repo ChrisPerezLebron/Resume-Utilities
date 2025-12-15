@@ -82,7 +82,7 @@ courses = [
     "CMSC140 - Intro to Programming (C++)",
     "CMSC246 - Intro to SQL Using Oracle",
     "MATH240 - Linear Algebra (Matlab)",
-    "CMSC330 - Organization of Programming Languages (Python, OCamel, Rust)",
+    "CMSC330 - Organization of Programming Languages (Python, OCaml, Rust)",
     "ENGL393 - Technical Writing",
 ]
 # Embedd all courses as unit length word embeddings into a single matrix
@@ -444,16 +444,16 @@ if PROJECTS:
             "implemented union of two FSMs representing regex strings",
             "implemented star (Kleene closure) of a FSM representing a regex string"
         ]),
-        ("OCamel Higher Order Function Utilities | OCamel", [
+        ("OCaml Higher Order Function Utilities | OCaml", [
             ""
             "functional programming"
-            "OCamel" 
-            "implemented higher order functions (HOF) in OCamel"
-            "used HOF in OCamel to solve complex problems"
+            "OCaml" 
+            "implemented higher order functions (HOF) in OCaml"
+            "used HOF in OCaml to solve complex problems"
             "Recursion"
         ]), 
-        ("Regex Finite State Machine | OCamel", [
-            "OCamel",
+        ("Regex Finite State Machine | OCaml", [
+            "OCaml",
             "functional programming",
             "Recursion",
             "Regex",
@@ -465,8 +465,8 @@ if PROJECTS:
             "implemented union of two FSMs representing regex strings",
             "implemented star (Kleene closure) of a FSM representing a regex string"
         ]),
-        ("Lambda Calculus Interpreter | OCamel", [
-            "OCamel", 
+        ("Lambda Calculus Interpreter | OCaml", [
+            "OCaml", 
             "functional programming",
             "Recursion",
             "parsing", 
