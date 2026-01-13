@@ -63,7 +63,8 @@ def extract_text_from_pdf(pdf_path):
 # Create or load embeddings 
 resume_names = [] 
 resumes = []
-resume_folder_path = "/Users/christopherperezlebron/Documents/Resumes"
+# resume_folder_path = "/Users/christopherperezlebron/Documents/Resumes"
+resume_folder_path = "./resumes"
 for filename in os.listdir(resume_folder_path):
     cache_path = "cache/"
     pkl_file_path = cache_path+filename.replace(".pdf", ".pkl")
