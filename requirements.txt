@@ -1,2 +1,5 @@
 pymupdf
 chromadb
+haystack-ai
+numpy
+sentence-transformers>=5.0.0
